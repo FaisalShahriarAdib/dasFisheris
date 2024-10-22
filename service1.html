@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>দাস ফিশারিজ - বৈজ্ঞানিক উপায়ে পোনা ডেলিভারি</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        body {
+            font-family: 'Tiro Bangla', serif;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+
+    <style>
+        body {
+            font-family: 'Tiro Bangla', serif;
+            font-family: Arial, sans-serif;
+        }
+        .carousel-text {
+            position: absolute;
+            z-index: 20;
+            color: white;
+            text-align: center;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); /* Centering */
+        }
+        .carousel-overlay {
+            background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay */
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 10;
+        }
+    </style>
+
+</head>
+
+<!-- navbar start -->
+
+<section class="navbar bg-white sticky top-0 z-50 border-b border-gray-300 shadow-xl">
+    <div class="navbar-start">
+      <img class="h-14" src="images/logo_new.png" alt="">
+      <a class="btn btn-ghost normal-case text-2xl lg:text-3xl text-black ml-2" href="index.html">দাস ফিশারিজ</a>
+    </div>
+  
+    <!-- Hamburger Menu for Mobile -->
+    <div class="navbar-end lg:hidden">
+      <div class="dropdown dropdown-end relative">
+        <label tabindex="0" class="btn btn-ghost lg:hidden" id="hamburger-button">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+          </svg>
+        </label>
+        <ul id="mobile-menu" class="dropdown-content mt-3 p-2 shadow bg-white rounded-box w-52 hidden">
+          <li><a class="hover:bg-green-500" href="index.html">Home</a></li>
+          <li><a class="hover:bg-green-500" href="index.html#services">Services</a></li>
+          <li><a class="hover:bg-green-500" href="products.html">Products</a></li>
+          <li><a class="hover:bg-green-500" href="about.html">About</a></li>
+          <li><a class="hover:bg-green-500" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Full Menu for Desktop -->
+    <div class="navbar-end hidden lg:flex">
+      <a class="hover:bg-green-500 p-2 rounded mx-1" href="index.html">Home</a>
+      <a class="hover:bg-green-500 p-2 rounded mx-1" href="index.html#services">Services</a>
+      <a class="hover:bg-green-500 p-2 rounded mx-1" href="products.html">Products</a>
+      <a class="hover:bg-green-500 p-2 rounded mx-1" href="about.html">About</a>
+      <a class="hover:bg-green-500 p-2 rounded mx-1" href="contact.html">Contact</a>
+    </div>
+  </section>
+
+<!-- navbar end -->
+
+<body class="bg-gray-100">
+
+    <!-- Main Container -->
+    <div class="container mx-auto p-8">
+
+        <section class="bg-gradient-to-b from-green-500 to-green-700 text-center py-16">
+            <div class="container mx-auto px-4">
+                <h1 class="text-white text-3xl md:text-5xl font-bold mb-4">বৈজ্ঞানিক ভাবে মাছ চাষের প্রশিক্ষন</h1>
+                
+                
+            </div>
+        </section>
+
+        <!-- Information Section -->
+        <section class="bg-white shadow-lg rounded-lg p-6 md:p-12 mb-12">
+            <div class="grid grid-cols-1">
+                <!-- Right Content -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">পুকুর ব্যবস্থাপনা</h2>
+                    <p class="text-gray-600 mb-6">
+                        মাছ চাষের পুকুরের কিছু বৈশিষ্ট্য থাকা দরকার যা চাষ প্রক্রিয়াকে লাভজনক করতে যথেষ্ট ভূমিকা রাখে। একটি আদর্শ মাছ চাষের পুকুরের নিম্নলিখিত বৈশিষ্ট্যগুলো থাকা প্রয়োজন-
+                    </p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li>পুকুরটি বন্যামুক্ত হতে হবে। এজন্য পুকুরের পাড় যথেষ্ট উঁচু হতে হবে।</li>
+                        <li>পুকুরের মাটি দোআঁশ, পলি- দোআঁশ বা এঁটেল- দোআঁশ হলে সবচেয়ে ভালো। পুকুরে আলোর পরিমান সর্বচ্চো থাকা ভালো, এতে ফাইটোপ্লাঙ্কটন ভালো গ্রো করে।</li>
+                        <li>সারা বছর পানি থাকে এমন পুকুর চাষের জন্য অধিক উপযুক্ত।</li>
+                        <li>পুকুরের পানির গভীরতা ০.৭৫-২ মিটার সুবিধাজনক।</li>
+                        <li>পুকুরটি খোলামেলা স্থানে হলে ভালো হয় এবং পাড়ে বড় গাছপালা থাকবে না। এতে পুকুর প্রচুর আলো-বাতাস পাবে। ফলে পুকুরে সালোকসংশ্লেষণ বেশি হবে ও মাছের খাদ্য বেশি তৈরি হবে। পানিতে পর্যাপ্ত অক্সিজেন মিশবে। উত্তর-দক্ষিণমুখী পুকুর সুর্যালোক বেশি পাবে।</li>
+                        <li>পুকুরের তলায় অতিরিক্ত কাদা থাকা উচিত নয়। তলার কাদার পুরুত্ব ২০-২৫ সে.মি. এর বেশি হওয়া ঠিক নয়।</li>
+                        <li>চাষের পুকুরের আয়তন ২০-২৫ শতক হলে ব্যবস্থাপনা সহজ হয় । পুকুরের আকৃতি আয়তাকার হলে ভালো। এতে করে জাল টেনে মাছ আহরণ করা সহজ হয়।</li>
+                        <li>পুকুরের পাড়গুলো ১:২ হারে ঢালু হলে সবচেয়ে ভালো। অর্থাৎ পুকুরের তলা হতে পুকুরের পাড় যতটুকু উঁচু হবে পাড় ঢালু হয়ে পুকুরের তলার দিকে দ্বিগুণ দূরত্বে গিয়ে মিশবে।</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+
+
+        <section class="bg-white shadow-lg rounded-lg p-6 md:p-12 mb-12">
+            <div class="grid grid-cols-1">
+                <!-- Right Content -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">মাছ চাষের পুকুরের পানির গুণাগুণ</h2>
+                    <p class="text-gray-600 mb-6">
+                        মাছের বেঁচে থাকা, খাদ্যগ্রহণ ও আশানুরূপ বৃদ্ধির জন্য পুকুরের পানির গুণাগুণ অনুকূল মাত্রায় থাকা দরকার। পুকুরে পানির গুণাগুণকে দুই ভাগে ভাগ করা যায়।
+                    </p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li>ভৌতগুণাগুণ</li>
+                        <li>রাসায়নিকগুণাগুণ।</li>
+                        <p class="text-gray-600 mb-6">
+                            মাছ চাষে এদের প্রভাব সংক্ষেপে আলোচনা করা হলো-
+                        </p>
+
+                    </ul>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">ভৌত গুণাগুণ</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li><strong>গভীরতা: </strong>পুকুর বেশি গভীর হলে সূর্যের আলো পুকুরের অধিক গভীরতা পর্যন্ত পৌছাতে পারে না। ফলে অধিক গভীর অঞ্চলে মাছের প্রাকৃতিক খাদ্য প্লাংকটন তৈরি হয় না। আবার সেখানে অক্সিজেনের অভাব হতে পারে। অন্যদিকে পুকুর অগভীর হলে গ্রীষ্মকালে পুকুরের পানি অতিরিক্ত গরম হয়ে যায়। এসব কারণে মাছের ক্ষতি হতে পারে ও উৎপাদন ব্যাহত হতে পারে।</li>
+                        <li><strong>তাপমাত্রা: </strong>: তাপমাত্রার বৃদ্ধির উপর মাছের বৃদ্ধির নির্ভর করে। যেমন- মাছের বৃদ্ধি কমে যায়। একারণে শীতকালে পুকুরে সার ও খাদ্য প্রয়োগের পরিমাণ কমিয়ে দিতে হয়। রুই জাতীয় মাছের বৃদ্ধি ২৫-৩০ক্ক সে. তাপমাত্রা সবচেয়ে ভালো হয়।</li>
+                        <li><strong>ঘোলাত্ব:  </strong>কাদা কণার কারণে পুকুরের পানি ঘোলা হলে পানিতে সূর্যালোক প্রবেশে বাধা পায়। এতে করে মাছের প্রাকৃতিক খাদ্য উৎপাদন ব্যাহত হয়।</li>
+                        <li><strong>সূর্যালোক: </strong>যে পুকুরে সূর্যালোক বেশি পড়ে সেখানে সালোকসংশ্লেষণ ভালো হয়। ফলে সেখানে ফাইটোপ্লাংটন বেশি উৎপাদিত হয় ও মাছের উৎপাদন বৃদ্ধি পায়।</li>
+                        
+                    </ul>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">রাসায়নিক গুণাগুণ</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li><strong>দ্রবীভূত অক্সিজেন: </strong>পুকুরের পানিতে দ্রবীভূত অক্সিজেন মাছ চাষের জন্য অত্যন্ত গুরুত্বপূর্ণ। প্রধানত ফাইটোপ্লাংকটন ও জলজ উদ্ভিদ সালোকসংশ্লেষণ প্রক্রিয়ায় যে অক্সিজেন তৈরি করে পুকুরের পানিতে দ্রবীভূত হয়। বায়ুমণ্ডল হতে সরাসরি পানির উপরিভাগেও কিছু অক্সিজেন মিশ্রিত হয়। পুকুরে বসবাসকারী মাছ, জলজ উদ্ভিদ ও অন্যান্য প্রাণী এ অক্সিজেন দ্বারা শ্বাসকার্য চালায়। রাতে সূর্যালোকের অভাবে সালোকসংশ্লেষণ হয় না বলে পানিতে কোনো অক্সিজেন তৈরি হয় না। এজন্য সকালে পুকুরে অক্সিজেনের পরিমাণ কমে যায় ও বিকেলে বেশি থাকে। মাছ চাষের জন্য পুকুরের পানিতে অক্সিজেনের পরিমাণ কমপক্ষে ৫ মিলি গ্রাম/লিটার (৫ পিপিএম বা ১ মিলিয়ন ভাগের পাঁচ ভাগ) থাকা প্রয়োজন।</li>
+                        <li><strong>দ্রবীভূত কার্বনডাই অক্সাইড: </strong> পুকুরের পানিতে দ্রবীভূত অক্সিজেন মাছ চাষের জন্য অত্যন্ত গুরুত্বপূর্ণ। প্রধানত ফাইটোপ্লাংকটন ও জলজ উদ্ভিদ সালোকসংশ্লেষণ প্রক্রিয়ায় যে অক্সিজেন তৈরি করে পুকুরের পানিতে দ্রবীভূত হয়। বায়ুমণ্ডল হতে সরাসরি পানির উপরিভাগেও কিছু অক্সিজেন মিশ্রিত হয়। পুকুরে বসবাসকারী মাছ, জলজ উদ্ভিদ ও অন্যান্য প্রাণী এ অক্সিজেন দ্বারা শ্বাসকার্য চালায়। রাতে সূর্যালোকের অভাবে সালোকসংশ্লেষণ হয় না বলে পানিতে কোনো অক্সিজেন তৈরি হয় না। এজন্য সকালে পুকুরে অক্সিজেনের পরিমাণ কমে যায় ও বিকেলে বেশি থাকে। মাছ চাষের জন্য পুকুরের পানিতে অক্সিজেনের পরিমাণ কমপক্ষে ৫ মিলি গ্রাম/লিটার (৫ পিপিএম বা ১ মিলিয়ন ভাগের পাঁচ ভাগ) থাকা প্রয়োজন।</li>
+                        <li><strong>পিএইচ (pH):  </strong>মাছ চাষের জন্য পুকুরের পানির পিএইচ ৬.৫ হতে ৮.০ এর মধ্যে হলে ভালো হয়। ৬.৫ এর নিচে পিএইচ হলে মাছের বৃদ্ধি কমে যায়। পিএইচ ৪ এর নিচে বা ১১ এর উপরে হলে মাছ মারা যায়। পানির পিএইচ কমে গেলে পুকুরে চুন (১-২ কেজি/শতক) প্রয়োগ করতে হবে। পুকুরে ক্ষারীয় অবস্থা বেশি বেড়ে গেলে এমোনিয়াম সালফেট বা তেতুঁল পানিতে গুলে পুকুরে প্রয়োগ করা যেতে পারে।</li>
+                        <li><strong>ফসফরাস: </strong>প্রাকৃতিক পানিতে অতি অল্প পরিমাণ ফসফরাস থাকে। এই ফসফরাস ফসফেটে রূপান্তরিত হয়। পরিমিত ফসফেটের উপস্থিতিতে প্রচুর পরিমাণ ফাইটোপ্লাংটন জন্মায়।</li>
+                        <li><strong>টিডিএস: </strong>জৈব পদার্থ ও অজৈব রাসায়নিক দ্রব্যাদি গলিত অবস্থায় বা পানিতে মিশ্রিত অবস্থায় থাকলে তাকে টি. ডি.এস ( TDS) বা দ্রবীভূত সকল সলিড বস্তু (Total Dissolved Solids) বলা হয়। পুকুরের মাটি, খাদ্যদ্রব্য পচন, নদনদীর পানি, ঝর্ণার পানি, পাহাড় থেকে নেমে আসা পানি, কৃষি জমির পানি, লবণাক্ত পানি ইত্যাদি উৎস থেকে পুকুর ও জলাশয়ের পানির টি ডি এস (TDS) সৃষ্টি হয়। পরিমিত টিডিএস মাছ চাশজের জন্য গুরুত্বপূর্ণ। </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="bg-white shadow-lg rounded-lg p-6 md:p-12 mb-12">
+            <div class="grid grid-cols-1">
+                <!-- Right Content -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">পোনা নির্বাচন</h2>
+                    <p class="text-gray-600 mb-6">
+                        পোনা ডেলিভারির জন্য একটি কার্যকরী লজিস্টিক সিস্টেম তৈরি করা হয়। ডেলিভারি ব্যবস্থার মধ্যে অন্তর্ভুক্ত:
+                    </p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li>পুকুরে চাষের জন্য ভাল মানের পোনা ক্রয় করতে হবে।</li>
+                        <li>এজন্য বিশ্বস্ত নার্সারীর নিকট হতে পোনা ক্রয় করতে হবে।</li>
+                        <li>সুস্থ্য পোনা স্বাভাবিক ভাবে চলাচল করবে।</li>
+                        <li>মাছের ফুলকা লাল ও চকচক করবে।</li>
+                        <li>চোখ উজ্জ্বল ও পরিস্কার দেখাবে।</li>
+                        <li>সুস্থ্য পোনা উজ্জ্বল চকচকে দেখাবে </li>
+                        <li>গামলা বা বালতির পানিতে স্রোতের বিপরীতে চললে বুঝতে হবে সেটি ভালো মানের পোনা।</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="bg-white shadow-lg rounded-lg p-6 md:p-12 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Left Content -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">ফিজিক্যাল টেস্ট:</h2>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li><strong>তাপমাত্রা (Temperature):</strong> 
+                            <p>আদর্শ তাপমাত্রা: ২০°C থেকে ৩০°C (সাধারণত)। মাছের প্রজাতি ভেদে পরিবর্তন হতে পারে।</p>
+                        </li>
+                        <li><strong>স্বচ্ছতা (Turbidity):</strong>
+                            <p>আদর্শ মান: ৩০-৬০ সেমি। সেকি ডিস্ক দাঁরা নিয়মিত পরিক্ষা করতে হবে।</p>
+                        </li>
+                    </ul>
+                </div>
+        
+                <!-- Middle Content -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">রাসায়নিক টেস্ট:</h2>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li><strong>pH:</strong> 
+                            <p>আদর্শ মান: ৬.৫ থেকে ৮.৫।</p>
+                        </li>
+                        <li><strong>দ্রবীভূত অক্সিজেন (DO):</strong>
+                            <p>আদর্শ মান: ৫ mg/L এর বেশি।</p>
+                        </li>
+                        <li><strong>অ্যামোনিয়া (Ammonia):</strong>
+                            <p>আদর্শ মান: ০.১ mg/L এর কম।</p>
+                        </li>
+                        <li><strong>নাইট্রাইট (Nitrite):</strong>
+                            <p>আদর্শ মান: ০.৫ mg/L এর কম।</p>
+                        </li>
+                        <li><strong>নাইট্রেট (Nitrate):</strong>
+                            <p>আদর্শ মান: ৫০ mg/L এর কম।</p>
+                        </li>
+                        <li><strong>ফসফেট (Phosphate):</strong>
+                            <p>আদর্শ মান: ০.০৫ mg/L এর কম।</p>
+                        </li>
+                        <li><strong>ক্যালসিয়াম (Calcium):</strong>
+                            <p>আদর্শ মান: ২০-৮০ mg/L।</p>
+                        </li>
+                        <li><strong>ম্যাগনেসিয়াম (Magnesium):</strong>
+                            <p>আদর্শ মান: ১০-৩০ mg/L।</p>
+                        </li>
+                    </ul>
+                </div>
+        
+                <!-- Right Content -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">মাইক্রোবায়োলজিক্যাল টেস্ট:</h2>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li><strong>কোলিফর্ম ব্যাকটেরিয়া:</strong> 
+                            <p>প্রতি ১০০ ml পানিতে ৫০ এর কম।</p>
+                        </li>
+                    </ul>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">পরীক্ষার জন্য ধাপগুলো:</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li>নমুনা সংগ্রহ: পরিচ্ছন্ন পাত্রে পানির নমুনা সংগ্রহ।</li>
+                        <li>তাপমাত্রা পরীক্ষা: থার্মোমিটার দিয়ে পানির তাপমাত্রা পরিমাপ।</li>
+                        <li>সচ্ছতা পরীক্ষা: সেক্কি ডিস্ক দিয়ে স্বচ্ছতা মাপা।</li>
+                        <li>pH ও DO মিটার ব্যবহার করে পরীক্ষা।</li>
+                        <li>রাসায়নিক কিট দিয়ে অন্যান্য উপাদান নির্ণয়।</li>
+                        <li>মাইক্রোবায়োলজিক্যাল পরীক্ষা: কোলিফর্ম নির্ধারণের জন্য কালচার প্লেট ব্যবহার।</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="bg-white shadow-lg rounded-lg p-6 md:p-12 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Left Content: Fish Diseases -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">সাধারণ মাছের রোগবালাই</h2>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li><strong>ব্যাকটেরিয়াল রোগ (Bacterial Diseases):</strong>
+                            <ul class="pl-5 space-y-1">
+                                <li><strong>1. এরোমোনাস ইনফেকশন (Aeromonas Infection):</strong> ব্যাকটেরিয়া এরোমোনাসের কারণে ঘটে, মাছের শরীরে ক্ষত তৈরি হয়।</li>
+                                <li>2. স্ট্রেপ্টোকক্কোসিস (Streptococcosis): স্ট্রেপ্টোকক্কাস ব্যাকটেরিয়ার কারণে ঘটে, মাছের চোখ ফোলা এবং অন্যান্য শারীরিক সমস্যা দেখা দেয়।</li>
+                            </ul>
+                        </li>
+                        <li><strong>ভাইরাল রোগ (Viral Diseases):</strong>
+                            <ul class="pl-5 space-y-1">
+                                <li>1. <strong>ইনফেকশাস প্যানক্রিয়াটিক নেক্রোসিস (Infectious Pancreatic Necrosis):</strong> ভাইরাসের কারণে প্যানক্রিয়াস নষ্ট হয়ে যায়।</li>
+                                <li>2. কার্প পক্স (Carp Pox): ভাইরাসের কারণে মাছের শরীরে সাদা দাগ দেখা যায়।</li>
+                            </ul>
+                        </li>
+                        <li><strong>ফাংগাল রোগ (Fungal Diseases):</strong>
+                            <ul class="pl-5 space-y-1">
+                                <li><strong>1. স্যাপরোলেগনিয়াসিস (Saprolegniasis):</strong> ফাংগাস স্যাপরোলেগনিয়া মাছের শরীরে আক্রমণ করে।</li>
+                                <li><strong>2. ব্রাঞ্চিওমাইকোসিস (Branchiomycosis):</strong> গিল ফাংগাস হিসেবে পরিচিত।</li>
+                            </ul>
+                        </li>
+                        <li><strong>পরজীবী রোগ (Parasitic Diseases):</strong>
+                            <ul class="pl-5 space-y-1">
+                                <li><strong>1. আইকথিওফথিরিয়াসিস (Ichthyophthiriasis):</strong> মাছের শরীরে সাদা দাগ দেখা যায়, যা পরজীবী দ্বারা সৃষ্ট।</li>
+                                <li><strong>2. ট্রাইকোডিনোসিস (Trichodiniasis):</strong> মাছের শরীরের উপর পরজীবী আক্রমণ করে।</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+        
+                <!-- Right Content: Role of Doctors -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">দাস ফিশারিজের ডাক্তারদের ভূমিকা</h2>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li><strong>রোগ নির্ণয় (Diagnosis):</strong>
+                            <ul class="pl-5 space-y-1">
+                                <li><strong>1. </strong>মাছের শরীরের লক্ষণ পর্যবেক্ষণ করে সঠিক রোগ নির্ণয় করেন।</li>
+                                <li><strong>2. </strong>ল্যাবরেটরিতে পানির নমুনা এবং মাছের টিস্যু পরীক্ষা করে রোগ নির্ধারণ করেন।</li>
+                            </ul>
+                        </li>
+                        <li><strong>প্রতিরোধ (Prevention):</strong>
+                            <ul class="pl-5 space-y-1">
+                                <li><strong>1. </strong>মাছের খাদ্য এবং পানির গুণগত মান পর্যবেক্ষণ করে সুস্থ পরিবেশ নিশ্চিত করেন।</li>
+                                <li><strong>2. </strong>সঠিক টিকা এবং প্রতিরোধক ওষুধ ব্যবহার করেন।</li>
+                                <li><strong>3.</strong>পুকুর ও ট্যাংক পরিষ্কার রাখার পরামর্শ দেন।</li>
+                            </ul>
+                        </li>
+                        <li><strong>চিকিৎসা (Treatment):</strong>
+                            <ul class="pl-5 space-y-1">
+                                <li><strong>1. </strong>নির্দিষ্ট রোগের জন্য অ্যান্টিবায়োটিক, অ্যান্টিফাঙ্গাল, এবং অ্যান্টিপ্যারাসিটিক ওষুধ নির্ধারণ করেন।</li>
+                                <li><strong>2. </strong>সংক্রামিত মাছকে আলাদা পুকুরে বা ট্যাংকে রেখে চিকিৎসা করেন।</li>
+                            </ul>
+                        </li>
+                        <li><strong>পরামর্শ (Consultation):</strong>
+                            <ul class="pl-5 space-y-1">
+                                <li><strong>1. </strong>মাছ চাষীদের সঠিক পরিচর্যার পদ্ধতি সম্পর্কে পরামর্শ দেন।</li>
+                                <li><strong>2. </strong>নিয়মিত পরিদর্শন এবং স্বাস্থ্য পরীক্ষা পরিচালনা করেন।</li>
+                            </ul>
+                        </li>
+                        <p class="text-gray-600 mb-6">
+                            মাছের রোগবালাই প্রতিরোধ ও চিকিৎসা করার জন্য দাস ফিশারিজের ডাক্তাররা অত্যন্ত গুরুত্বপূর্ণ ভূমিকা পালন করেন। তাদের পরামর্শ এবং চিকিৎসা পদ্ধতি মাছ চাষকে লাভজনক ও টেকসই করতে সহায়তা করে।
+                        </p>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white shadow-lg rounded-lg p-6 md:p-12 mb-12">
+            <div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">সঠিক খাবার নির্বাচন</h2>
+                <p class="text-gray-600 mb-6">
+                    মাছের সঠিক খাবার নির্বাচন করতে হলে প্রজাতি, বয়স, এবং আকার অনুযায়ী খাবার বেছে নিতে হবে। কার্প, তেলাপিয়া, এবং ক্যাটফিশের খাদ্যাভ্যাস ভিন্ন হওয়ায়, তাদের জন্য উপযুক্ত খাদ্য নির্বাচন করা গুরুত্বপূর্ণ। লার্ভা ও ফ্রাই মাছের জন্য প্রোটিন সমৃদ্ধ খাবার যেমন আর্টেমিয়া ও ডাফনিয়া দরকার, আর বাচ্চা ও বয়স্ক মাছের জন্য সুষম খাদ্য প্রয়োজন যাতে প্রোটিন, কার্বোহাইড্রেট, ও লিপিড থাকে।
+                </p>
+                <p class="text-gray-600 mb-6">
+                    খাদ্যের উপাদান হিসেবে প্রোটিন ৩০-৫০%, লিপিড ৫-১০%, এবং পর্যাপ্ত কার্বোহাইড্রেট থাকা উচিত। ভিটামিন ও খনিজও মাছের রোগ প্রতিরোধ এবং স্বাস্থ্য রক্ষায় গুরুত্বপূর্ণ ভূমিকা পালন করে। খাবারের ধরন হিসেবে পেলেট ফিড (সিঙ্কিং ও ফ্লোটিং পেলেট), লাইভ ফিড (আর্থওয়ার্ম, ডাফনিয়া), এবং গ্রিন ফিড (জলজ উদ্ভিদ) ব্যবহার করা যেতে পারে।
+                </p>
+                <p class="text-gray-600 mb-6">
+                    খাদ্যের মান বজায় রাখতে এবং সঠিকভাবে সংরক্ষণ করতে হবে, যেন খাদ্য শুষ্ক ও ঠান্ডা স্থানে থাকে। মাছের ওজন ও সংখ্যা অনুযায়ী খাবারের পরিমাণ নির্ধারণ করতে হবে এবং নির্দিষ্ট সময়সূচী অনুযায়ী খাদ্য প্রদান করতে হবে। খাদ্য প্রদানের পর মাছের খাওয়ার ধরন ও স্বাস্থ্যের পরিবর্তন পর্যবেক্ষণ করা উচিত। সঠিক খাদ্য নির্বাচন ও প্রদানের মাধ্যমে মাছের স্বাস্থ্য, দ্রুত বৃদ্ধি, এবং উৎপাদনশীলতা নিশ্চিত করা যায়।
+                </p>
+            </div>
+        </section>
+
+        <section class="bg-white shadow-lg rounded-lg p-6 md:p-12 mb-12">
+            <div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">সঠিক খাবার নির্বাচন</h2>
+                <p class="text-gray-600 mb-6">
+                    মাছ চাষের দুটি অত্যন্ত গুরুত্বপূর্ণ ধাপ হলো পোনা অবমুক্তকরণ এবং আহরণ। পোনা অবমুক্তকরণ মানে পুকুরে ছোট মাছের বাচ্চা ছেড়ে দেওয়া। এটি সঠিকভাবে করার জন্য প্রথমে পুকুরটি সঠিকভাবে প্রস্তুত করতে হয়, যেমন পুকুর পরিষ্কার করা, পানির গুণগত মান পরীক্ষা করা এবং নিশ্চিত হওয়া যে পানিতে পর্যাপ্ত অক্সিজেন, উপযুক্ত pH এবং সঠিক তাপমাত্রা রয়েছে। পোনা নির্বাচন করার সময় স্বাস্থ্যকর ও সুস্থ পোনা বেছে নেওয়া উচিত। সাধারণত সকাল বা বিকেলে পোনা অবমুক্ত করা হয় যাতে তাপমাত্রা সহনীয় থাকে এবং পোনা সহজে নতুন পরিবেশের সাথে খাপ খাইয়ে নিতে পারে।</p>
+                <p class="text-gray-600 mb-6">
+                    অন্যদিকে, মাছ আহরণ হলো পরিপক্ব মাছ পুকুর থেকে তোলা। মাছের বাজার মূল্য এবং চাহিদার ভিত্তিতে আহরণের সময় নির্ধারণ করতে হয়, যা সাধারণত শীতকাল এবং বসন্তকালে করা হয়। মাছ ধরার জন্য সাধারণত জাল বা নেট ব্যবহার করা হয়, এবং বড় পুকুরে সেন্টার পুল বা ড্রেনিং পদ্ধতি ব্যবহার করা হয়। আহরণের সময় মাছের শরীরে আঘাত লাগা থেকে রক্ষা করতে হবে এবং দ্রুত ও সাবধানতার সাথে মাছ সংগ্রহ করতে হবে। আহরণকৃত মাছ দ্রুত প্রক্রিয়াজাত, প্যাকেজিং, এবং সঠিক তাপমাত্রায় সংরক্ষণ ও পরিবহন নিশ্চিত করা জরুরি। সঠিকভাবে পোনা অবমুক্তকরণ এবং আহরণ করলে মাছের উৎপাদনশীলতা ও ব্যবসায়িক সফলতা অর্জন করা সম্ভব হয়।</p>
+            </div>
+        </section>
+        
+    </div>
+
+            <!-- JavaScript for smooth scrolling -->
+            <script>
+                document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+                  anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetID = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetID);
+                    const offset = 100; // Adjust this value according to your sticky navbar height
+                    
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+                    
+                    window.scrollTo({
+                      top: targetPosition,
+                      behavior: 'smooth'
+                    });
+                  });
+                });
+              
+                // Hamburger Menu Toggle
+                const hamburgerButton = document.getElementById('hamburger-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+                
+                hamburgerButton.addEventListener('click', () => {
+                  mobileMenu.classList.toggle('hidden'); // Toggles visibility of mobile menu
+                });
+              </script>
+
+    
+        <!---------------------------------Foter  Section-5 Start ------------------------------------->
+        <section>
+            <footer class="footer footer-center bg-gray-950 text-base-content rounded p-10 mt-32">
+                <nav class="grid grid-flow-col gap-4 text-white">
+                    <a href="about.html" class="link link-hover">About us</a>
+                    <a href="contact.html" class="link link-hover">Contact</a>
+                    <a href="advise.html" class="link link-hover">Advises</a>
+                    <a href="gallery.html" class="link link-hover">Gallery</a>
+                </nav>
+                <nav>
+                    <div class="grid grid-flow-col gap-4">
+                        <!-- Twitter -->
+                        <a href="https://x.com/DasFisheries" target="_blank" class="hover-effect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                            </svg>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/DASFisheries" target="_blank" class="hover-effect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/dasfisheries/" target="_blank" class="hover-effect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.338 3.608 1.314.975.975 1.252 2.241 1.314 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.338 2.633-1.314 3.608-.975.975-2.241 1.252-3.608 1.314-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.338-3.608-1.314-.975-.975-1.252-2.241-1.314-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.338-2.633 1.314-3.608.975-.975 2.241-1.252 3.608-1.314 1.265-.058 1.645-.07 4.849-.07m0-2.163c-3.257 0-3.667.014-4.947.072-1.516.066-2.955.35-4.056 1.452-1.101 1.101-1.386 2.541-1.452 4.056-.058 1.28-.072 1.69-.072 4.947s.014 3.667.072 4.947c.066 1.516.35 2.955 1.452 4.056 1.101 1.101 2.541 1.386 4.056 1.452 1.28.058 1.69.072 4.947.072s3.667-.014 4.947-.072c1.516-.066 2.955-.35 4.056-1.452 1.101-1.101 1.386-2.541 1.452-4.056.058-1.28.072-1.69.072-4.947s-.014-3.667-.072-4.947c-.066-1.516-.35-2.955-1.452-4.056-1.101-1.101-2.541-1.386-4.056-1.452-1.28-.058-1.69-.072-4.947-.072zm0 5.838a6.165 6.165 0 1 0 0 12.33 6.165 6.165 0 0 0 0-12.33zm0 10.165a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 1 0-2.881 1.44 1.44 0 0 1 0 2.881z"></path>
+                            </svg>
+                        </a>
+                        <!-- Threads -->
+                        <a href="https://www.threads.net/@dasfisheries" target="_blank" class="hover-effect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                                <path d="M12.08 24C5.41 24 .18 18.65.18 12S5.42 0 12.08 0c6.63 0 11.87 5.35 11.87 12s-5.24 12-11.87 12zM12.08 1.77C6.32 1.77 1.95 6.31 1.95 12c0 5.67 4.38 10.2 10.13 10.2 5.71 0 10.12-4.51 10.12-10.2 0-5.68-4.41-10.2-10.12-10.2zm4.15 13.94c-.72-.09-.85-.37-.85-.37-.04-.03-2.44-1.43-2.96-1.88-.34.26-.73.41-1.14.42-1.29 0-2.34-1.21-2.34-2.71 0-1.57 1.16-2.77 2.68-2.77 1.55 0 2.67 1.3 2.67 2.84 0 .83-.3 1.58-.85 2.13.07.06 1.56.96 2.23 1.28.12-.25.18-.53.18-.82 0-.43-.16-.79-.44-1.01-.44-.33-1.12-.45-1.77-.42-.63.02-1.42.08-2.15.24-.54.12-.94-.35-1-.89s.32-1.05.86-1.13c.69-.12 1.51-.19 2.14-.24 1.05-.06 1.86-.18 2.48-.52.59-.33.88-.9.88-1.7-.01-1.2-.78-2.16-1.85-2.29-1.62-.21-2.81 1.19-3.04 1.56-.4.6-1.06.78-1.6.43-.52-.33-.66-1.06-.31-1.61.08-.12.8-1.18 1.86-1.76 1.18-.66 2.6-.79 3.88-.37 1.89.62 3.18 2.35 3.18 4.41 0 2.59-2.09 4.71-4.74 4.71-.23 0-.46-.01-.68-.03z"></path>
+                            </svg>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@dasfisheries" target="_blank" class="hover-effect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </nav>
+                <p class="text-white">Copyright © 2024 - All right reserved by Das Fisheries Ltd</p>
+            </footer>
+        </section>
+        
+        <style>
+            .hover-effect {
+                transition: transform 0.3s ease, color 0.3s ease;
+            }
+        
+            .hover-effect:hover {
+                transform: scale(1.2);
+                color: #1DA1F2; /* Or change to the color you prefer */
+            }
+        </style>
+        
+        
+                     
+
+        <!---------------------------------Foter  Section-5 End ------------------------------------->
+
+
+</body>
+
+</html>

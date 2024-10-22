@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white">
+<html class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>দাস ফিশারিজ</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        body {
+            font-family: 'Tiro Bangla', serif;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+    </style>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&display=swap');
+    </style>
+
+<style>
+    /* Custom styles for the arrows and buttons */
+    .slider-container:hover .slider-arrow {
+        opacity: 1;
+    }
+    .slider-arrow {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+</style> 
+
+    <style>
+        body {
+            font-family: 'Tiro Bangla', serif;
+            font-family: Arial, sans-serif;
+        }
+        .carousel-text {
+            position: absolute;
+            z-index: 20;
+            color: white;
+            text-align: center;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); /* Centering */
+        }
+        .carousel-overlay {
+            background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay */
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 10;
+        }
+
+
+        @keyframes marquee {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+        }
+
+        .animate-marquee {
+        display: inline-block;
+        animation: marquee 15s linear infinite;
+        }
+        
+
+        
+    </style>
+
+
+
+
+    
+    
+
+    
+</head>
+<body>
+
+    <!-----------------------------------------NavBar Start----------------------------------->
+
+    <section class="navbar bg-white sticky top-0 z-50 border-b border-gray-300 shadow-xl">
+        <div class="navbar-start">
+          <img class="h-14" src="images/logo_new.png" alt="">
+          <a class="btn btn-ghost normal-case text-2xl lg:text-3xl text-black ml-2" href="index.html">দাস ফিশারিজ</a>
+        </div>
+      
+        <!-- Hamburger Menu for Mobile -->
+        <div class="navbar-end lg:hidden">
+          <div class="dropdown dropdown-end relative">
+            <label tabindex="0" class="btn btn-ghost lg:hidden" id="hamburger-button">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+              </svg>
+            </label>
+            <ul id="mobile-menu" class="dropdown-content mt-3 p-2 shadow bg-white rounded-box w-52 hidden">
+              <li><a class="hover:bg-green-500" href="index.html">Home</a></li>
+              <li><a class="hover:bg-green-500 smooth-scroll" href="#services">Services</a></li>
+              <li><a class="hover:bg-green-500" href="products.html">Products</a></li>
+              <li><a class="hover:bg-green-500" href="about.html">About</a></li>
+              <li><a class="hover:bg-green-500" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <!-- Full Menu for Desktop -->
+        <div class="navbar-end hidden lg:flex">
+          <a class="hover:bg-green-500 p-2 rounded mx-1" href="index.html">Home</a>
+          <a class="hover:bg-green-500 p-2 rounded mx-1 smooth-scroll" href="#services">Services</a>
+          <a class="hover:bg-green-500 p-2 rounded mx-1" href="products.html">Products</a>
+          <a class="hover:bg-green-500 p-2 rounded mx-1" href="about.html">About</a>
+          <a class="hover:bg-green-500 p-2 rounded mx-1" href="contact.html">Contact</a>
+        </div>
+      </section>
+
+    
+      
+      <!-----------------------------------------NavBar End---------------------------------------->
+
+
+      <!-----------------------------------------Video Section Start---------------------------------------->
+
+
+    <section class="relative h-screen mb-4">
+        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+            <source src="images/vid.mov" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="relative z-10 flex items-center justify-center h-full bg-black bg-opacity-50">
+            <div class="text-center text-white">
+                <h1 class="text-6xl font-bold" style="font-family: 'Galada', cursive;">দাস ফিশারিজ</h1>
+                <p class="text-3xl mt-4" style="font-family: 'Galada', cursive;">জন্মই যার বৃদ্ধি</p>
+            </div>
+        </div>
+
+    </section>
+          <!-----------------------------------------Video Section End---------------------------------------->
+
+ 
+
+
+
+
+          <!-----------------------------------------Section 123---------------------------------------->
+    <!-----------
+    <section class="mb-44 bg-cover bg-center h-[600px]" style="background-image: url('images/bg.jpg');">
+        <div class="mb-10 ml-24 flex justify-center">
+            <div class="mr-8">
+                <h1 class="my-auto text-6xl font-bold text-green-600 mr-24 mt-8">দাস ফিশারিজ <br><span class="text-3xl text-black">মাছে-ভাতে বাঙালি</span></h1>
+                <p class="text-black">আমরা নন ফ্রোজেন ও টাটকা মাছ হোম ডেলিভারি করি। গ্রাহকের চাহিদামতো রেডি টু কুক করে দেয়া হয়। আস্ত কিংবা কাটিং যেমন আপনার পছন্দ, তেমনটাই পাবেন। আপনাদের অনুপ্রেরণা আমাদের সামনে এগিয়ে যাওয়ার সাহস যোগাবে। টাটকা মাছ খান, খাবারের স্বাদ ও পুষ্টি এনজয় করুন।</p>
+                <button type="button" class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 mt-32 w-32">Learn More</button>
+            </div>
+            <img class="h-96 mt-8 mr-24 rounded-lg shadow-md shadow-black" src="images/dashmain.jpeg" alt="">
+        </div>
+    </section>
+    ---------->
+        <!-----------------------------------------Section 123---------------------------------------->
+
+
+
+        <!-- welcome screen start -->
+         <section class="bg-white py-8">
+            <div class="container mx-auto px-4">
+              <div class="overflow-hidden relative bg-gradient-to-r from-green-200 via-green-300 to-green-400 shadow-lg rounded-lg py-2 px-4">
+                <h1 class="text-gray-800 font-bold text-lg inline-block whitespace-nowrap animate-marquee">
+                  দাস ফিশারিজ ওয়েবসাইটে আপনাকে স্বাগতম | আমরা খুব শীঘ্রই আমাদের কার্যক্রম চালু করছি! বিস্তারিত জানার জন্য আমাদের সাথে যোগাযোগ করুন।
+                </h1>
+              </div>
+            </div>
+          </section>
+          <!-- welcome screen start -->
+              
+     
+    
+      <!---------------------------------Slider Start--------------------------------->
+      <section class="relative slider-container">
+        <!-- Image Slider -->
+        <div class="relative overflow-hidden">
+            <!-- Slider images -->
+            <div class="slider relative">
+
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <img src="images/pond.jpg" alt="Slide 1" class="w-full h-[500px] object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center text-center">
+                        <h2 class="text-4xl lg:text-6xl font-bold text-white" style="font-family: 'Baloo Da 2', cursive;">দাস ফিশারিজ</h2>
+                        <p class="text-white text-lg lg:text-xl mt-4" style="font-family: 'Baloo Da 2', cursive;">জন্মই যার বৃদ্ধি</p>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <img src="images/catfish.jpg" alt="Slide 2" class="w-full h-[500px] object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center text-center">
+                        <h2 class="text-4xl lg:text-6xl font-bold text-white" style="font-family: 'Baloo Da 2', cursive;"> মাছের বীজ, পোনা ও ব্রুড</h2>
+                        <p class="text-white text-lg lg:text-xl mt-4" style="font-family: 'Baloo Da 2', cursive;">দাস ফিশারিজ সারা দেশে উচ্চ গুণগত মানসম্পন্ন তিলাপিয়া, কার্প, ক্যাটফিশ এবং চিংড়ির পোনা সরবরাহ করছে।</p>
+                        <a href="products.html" class="mt-6 bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600">SEE ALL PRODUCTS</a>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide hidden">
+                    <img src="images/fish.jpg" alt="Slide 3" class="w-full h-[500px] object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center text-center">
+                        <h2 class="text-4xl lg:text-6xl font-bold text-white" style="font-family: 'Baloo Da 2', cursive;">মাছ চাষীদের জন্য গুরুত্বপূর্ণ পরামর্শ</h2>
+        
+                        <a href="advise.html" class="mt-6 bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600">SEE ALL ADVISES</a>
+                    </div>
+                </div>
+                <!-- Add more slides as needed -->
+            </div>
+        </div>
+
+        <!-- Left Arrow -->
+        <button class="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-white rounded-full slider-arrow" onclick="prevSlide()">
+            <svg class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+
+        <!-- Right Arrow -->
+        <button class="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-white rounded-full slider-arrow" onclick="nextSlide()">
+            <svg class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+    </section>
+
+
+ 
+      <!---------------------------------Slider End---------------------------------->
+
+      <!----------------------------------------দাস ফিশারিজ Section-1 Start------------------------------------->
+<!-- About Us Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between">
+      <!-- Image -->
+      <div class="lg:w-1/2 w-full mb-8 lg:mb-0">
+        <img src="images/dasbanner.jpeg" alt="Seafood Image" class="w-full h-auto rounded-lg shadow-lg">
+      </div>
+  
+  
+      <!-- Text Content -->
+      <div class="lg:w-1/2 w-full px-6 lg:px-12">
+        <h3 class="text-gray-500 uppercase text-sm tracking-widest mb-4">About Us</h3>
+        <h2 class="text-4xl font-bold text-blue-700 mb-6" style="font-family: 'Baloo Da 2', cursive;">দাস ফিশারিজ</h2>
+        <!-- <p class="text-lg text-gray-700 mb-4">
+            দাস ফিশারিজ
+        </p> -->
+        <p class="text-gray-600 mb-4" style="font-family: 'Baloo Da 2', cursive;">
+            <span class="text-xl font-bold text-green-700"> বাংলাদেশের </span>প্রথম বৈজ্ঞানিকভাবে মাছের বীজ, পোনা ও ব্রুড উৎপাদনকারী প্রতিষ্ঠান হলো দাস ফিশারিজ। প্রতিষ্ঠানটি সারা দেশে উচ্চ গুণগত মানসম্পন্ন তিলাপিয়া, কার্প, ক্যাটফিশ এবং চিংড়ির পোনা সরবরাহ করছে। দাস ফিশারিজ খামারীদের জন্য সার্বক্ষণিকভাবে ফিশারিজ ডাক্তারদের মাধ্যমে পরামর্শ ও সহায়তা নিশ্চিত করছে, যা লাখো খামারীর জন্য ভরসার এক গুরুত্বপূর্ণ উৎসে পরিণত হয়েছে।
+        </p>
+        <p class="text-gray-600 mb-4" style="font-family: 'Baloo Da 2', cursive;">
+            দাস ফিশারিজ দেশের সাতটি বিভাগের শাখার মাধ্যমে মাছের বীজ ও পোনা বিতরণ করে। এই শাখাগুলো রাজশাহী, পাবনা, বগুড়া, বরিশাল, খুলনা, দিনাজপুর এবং ময়মনসিংহ জেলায় অবস্থিত। প্রতিষ্ঠানটির কার্যক্রমের মাধ্যমে দেশজুড়ে মাছের উৎপাদন বৃদ্ধি এবং খামারীদের আয়ের মানোন্নয়নে গুরুত্বপূর্ণ ভূমিকা পালন করছে।
+        </p>
+        <!-- Read More Button -->
+        <a href="about.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition duration-300">
+          Read More
+        </a>
+      </div>
+    </div>
+  </section>
+    
+      
+      <!----------------------------------------দাস ফিশারিজ Section-1 Start------------------------------------->
+
+
+      
+      <!----------------------------------------NUMBERS Section-2 Start ------------------------------------->
+    
+    
+    
+      <!-- <section>
+        <div class="navbar bg-green-600 text-white rounded-lg w-11/12 h-20 mt-9 mx-auto flex justify-center items-center">
+            <h1 class=" text-xl">NUMBERS</h1>
+        </div>
+
+        <div class="flex mt-10 ml-8">
+            <div>
+                <svg class="ml-28" width="60px" height="60px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M18.5 3H16C15.7239 3 15.5 3.22386 15.5 3.5V3.55891L19 6.35891V3.5C19 3.22386 18.7762 3 18.5 3Z" fill="#60be60"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M10.75 9.5C10.75 8.80964 11.3097 8.25 12 8.25C12.6904 8.25 13.25 8.80964 13.25 9.5C13.25 10.1904 12.6904 10.75 12 10.75C11.3097 10.75 10.75 10.1904 10.75 9.5Z" fill="#60be60"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M20.75 10.9605L21.5315 11.5857C21.855 11.8444 22.3269 11.792 22.5857 11.4685C22.8444 11.1451 22.792 10.6731 22.4685 10.4143L14.3426 3.91362C12.9731 2.81796 11.027 2.81796 9.65742 3.91362L1.53151 10.4143C1.20806 10.6731 1.15562 11.1451 1.41438 11.4685C1.67313 11.792 2.1451 11.8444 2.46855 11.5857L3.25003 10.9605V21.25H2.00003C1.58581 21.25 1.25003 21.5858 1.25003 22C1.25003 22.4142 1.58581 22.75 2.00003 22.75H22C22.4142 22.75 22.75 22.4142 22.75 22C22.75 21.5858 22.4142 21.25 22 21.25H20.75V10.9605ZM9.25003 9.5C9.25003 7.98122 10.4812 6.75 12 6.75C13.5188 6.75 14.75 7.98122 14.75 9.5C14.75 11.0188 13.5188 12.25 12 12.25C10.4812 12.25 9.25003 11.0188 9.25003 9.5ZM12.0494 13.25C12.7143 13.25 13.2871 13.2499 13.7459 13.3116C14.2375 13.3777 14.7088 13.5268 15.091 13.909C15.4733 14.2913 15.6223 14.7625 15.6884 15.2542C15.7462 15.6842 15.7498 16.2146 15.75 16.827C15.75 16.8679 15.75 16.9091 15.75 16.9506L15.75 21.25H14.25V17C14.25 16.2717 14.2484 15.8009 14.2018 15.454C14.1581 15.1287 14.0875 15.0268 14.0304 14.9697C13.9733 14.9126 13.8713 14.842 13.546 14.7982C13.1991 14.7516 12.7283 14.75 12 14.75C11.2717 14.75 10.8009 14.7516 10.4541 14.7982C10.1288 14.842 10.0268 14.9126 9.9697 14.9697C9.9126 15.0268 9.84199 15.1287 9.79826 15.454C9.75162 15.8009 9.75003 16.2717 9.75003 17V21.25H8.25003L8.25003 16.9506C8.24999 16.2858 8.24996 15.7129 8.31163 15.2542C8.37773 14.7625 8.52679 14.2913 8.90904 13.909C9.29128 13.5268 9.76255 13.3777 10.2542 13.3116C10.7129 13.2499 11.2858 13.25 11.9507 13.25H12.0494Z" fill="#60be60"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M10.75 9.5C10.75 8.80964 11.3097 8.25 12 8.25C12.6904 8.25 13.25 8.80964 13.25 9.5C13.25 10.1904 12.6904 10.75 12 10.75C11.3097 10.75 10.75 10.1904 10.75 9.5Z" fill="#60be60"></path> </g></svg>
+                <p class="text-black mx-4">6 Parent stock centres and 16 hatcheries</p>
+            </div>
+            <div>
+                <svg class="ml-44" height="60px" width="60px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#5cb75c;} </style> <g> <path class="st0" d="M25.227,436.832c28.8-18.127,53.8-30.066,75.852-37.461c22.043-7.385,41.12-10.275,58.373-10.275 c18.022,0,34.153,3.137,49.77,7.984c23.393,7.262,45.53,18.554,69.788,28.421c24.22,9.829,50.768,18.136,82.25,18.117 c37.869,0.019,82.06-11.976,137.724-44.846c5.57-3.289,7.424-10.474,4.125-16.045c-3.279-5.58-10.465-7.433-16.045-4.144 c-53.287,31.406-93.01,41.557-125.804,41.577c-18.231,0-34.524-3.137-50.227-7.994c-23.544-7.252-45.702-18.545-69.874-28.411 c-24.134-9.829-50.501-18.118-81.708-18.118c-19.904,0-41.653,3.384-65.835,11.502c-24.2,8.118-50.844,20.95-80.872,39.828 c-5.484,3.459-7.139,10.684-3.688,16.178C12.499,438.619,19.742,440.273,25.227,436.832z"></path> <path class="st0" d="M487.064,446.965c-53.287,31.406-93.01,41.557-125.804,41.586c-18.231-0.01-34.524-3.147-50.227-7.994 c-23.544-7.262-45.702-18.545-69.874-28.412c-24.134-9.819-50.501-18.127-81.708-18.107c-19.904,0-41.653,3.365-65.835,11.482 c-24.2,8.127-50.844,20.95-80.872,39.828c-5.484,3.46-7.139,10.693-3.688,16.178c3.441,5.484,10.684,7.139,16.169,3.688 c28.8-18.118,53.8-30.056,75.852-37.452c22.043-7.395,41.12-10.275,58.373-10.275c18.022,0,34.153,3.146,49.77,7.984 c23.393,7.252,45.53,18.544,69.788,28.411c24.22,9.838,50.768,18.136,82.25,18.117c37.869,0.02,82.06-11.976,137.724-44.836 c5.57-3.299,7.424-10.475,4.125-16.054C499.83,445.539,492.644,443.676,487.064,446.965z"></path> <path class="st0" d="M147.532,213.265l30.236,6.882c3.612,21.406,17.119,58.972,24.495,58.154 c8.802-0.97,33.174-75.112,33.174-75.112c40.854-13.298,73.972-20.085,73.972-20.266c-0.01,0,3.982,11.122,10.265,19.221 c6.331,8.136,14.335,13.46,22.347,2.899c16.549-21.663,41.044-50.283,63.981-78.638c11.426-14.287,22.414-28.706,31.339-43.496 c8.859-14.791,15.826-30,17.842-46.206c-6.16-15.304-27.49-28.335-56.471-33.716c-28.792-5.608-64.314-3.118-93.999,5.78 c-21.225-1.445-44.818-0.885-65.929,2.186c-21.112,3.004-39.666,8.479-50.588,15.17c-12.014,7.452-3.204,20.55,8.384,31.71 c11.605,11.178,25.721,20.855,25.692,20.883c0.2-0.162-22.842,38.078-32.917,85.482c-9.848-0.076-29.048,3.127-46.186,9.781 c-17.129,6.444-31.958,16.416-32.547,23.488C110.015,204.235,129.025,208.921,147.532,213.265z M377.79,30.885 c8.993-3.64,18.707,0.323,21.53,8.431c2.832,8.128-1.635,17.091-9.857,20.428c-8.232,3.298-17.68,0-21.284-7.833 C364.598,44.117,368.808,34.517,377.79,30.885z"></path> <path class="st0" d="M243.547,296.922c0,8.498,6.882,15.389,15.389,15.389c8.498,0,15.39-6.891,15.39-15.389 c0-8.498-6.892-15.39-15.39-15.39C250.428,281.533,243.547,288.424,243.547,296.922z"></path> <path class="st0" d="M86.156,253.597c6.283,4.762,15.246,3.536,20.019-2.756c4.772-6.293,3.536-15.237-2.756-20.019 c-6.283-4.781-15.238-3.545-20.019,2.748C78.628,239.852,79.863,248.816,86.156,253.597z"></path> <path class="st0" d="M65.71,326.066c3.727-4.914,2.766-11.929-2.157-15.655c-4.914-3.746-11.92-2.776-15.665,2.138 c-3.726,4.924-2.756,11.929,2.158,15.675C54.96,331.95,61.975,330.98,65.71,326.066z"></path> <path class="st0" d="M123.494,324.279c0,7.898,6.397,14.287,14.286,14.287c7.9,0,14.296-6.388,14.296-14.287 c0-7.889-6.397-14.287-14.296-14.287C129.891,309.992,123.494,316.39,123.494,324.279z"></path> </g> </g></svg>
+                <p class="text-black mx-4">22 Fish seed variants with 4 major categories of fish seed</p>
+            </div>
+            <div>
+                <svg class="ml-40" fill="#57b257" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="60px" viewBox="0 0 191.538 191.538" xml:space="preserve" stroke="#57b257"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M104.008,37.713c-1.838-9.315-7.399-9.341-15.81-8.162c-22.046,3.088-44.709,2.744-66.942,1.917 C11.342,31.1,3.062,28.9,1.165,40.808c-1.029,6.457,0.362,13.84,0.494,20.358C1.893,72.7,1.025,84.284,0.845,95.818 c-0.18,11.455,0.776,22.859-0.602,34.257c-0.5,4.136-0.492,8.711,2.649,11.852c5.709,5.709,17.252,2.677,25.08,0.615 c-0.719,14.86,16.534,22.334,29.078,17.667c6.754-2.512,10.549-8.353,11.71-14.875c9.706,3.164,20.399-0.181,30.394-1.126 c1.506-0.142,3.146-0.979,3.46-2.634c3.88-20.472,0.131-42.752-0.243-63.484C102.134,65.013,106.546,50.577,104.008,37.713z M54.75,150.035c-6.144,3.87-16.237,0.435-16.518-7.251c-0.132-3.604,1.808-7,4.26-9.483c0.661-0.67,1.446-1.18,2.276-1.628 c0.342-0.087,0.683-0.202,1.021-0.379c5.426-2.837,9.699-2.579,12.128,3.69C59.836,139.938,59.693,146.92,54.75,150.035z M91.675,137.866c-7.813,1.042-14.911,2.264-22.637,0.729c-0.22-2.438-0.758-4.852-1.645-7.108 c-4.17-10.614-15.166-15.28-24.496-9.456c-2.126,0.674-4.119,1.681-5.611,2.725c-4.583,3.21-7.381,7.849-8.634,13.075 c-12.128-0.269-22.393,0.907-21.114-15.778c1.247-16.262-0.555-33.064,0.108-49.44c0.367-9.056-4.751-36.468,10.564-34.6 c16.336,1.993,33.541,1.105,49.968,0.742c4.942-0.109,10.084-0.222,14.976-1.026c6.15-1.01,13.266-4.392,13.892,4.051 c0.737,9.928-1.927,19.931-2.379,29.821c-0.734,16.061,1.814,32.878,2.603,48.957C97.583,126.941,99.328,136.845,91.675,137.866z"></path> <path d="M191.279,102.583c-0.618-9.223-5.171-15.421-9.873-23.133c-5.947-9.752-9.715-21.236-17.498-29.82 c-6.311-6.959-11.591-5.111-20.641-3.901c-7.403,0.99-13.465,2.324-20.905,1.255c-2.873-0.413-6.694-1.467-9.625-0.661 c-5.174,1.423-5.413,5.85-5.678,10.36c-1.569,26.855,2.173,55.056,3.539,81.919c0.082,1.613,1.017,2.867,2.562,3.364 c6.296,2.024,11.558,1.699,17.676,0.406c0.506,12.286,10.62,22.033,23.209,19.837c9.919-1.73,16.366-8.615,18.435-17.271 c0.463,0.29,1.013,0.49,1.746,0.434c3.852-0.3,8.868-1.009,12.513-1.116c1.829-0.054,3.141-1.433,3.231-3.233 C190.624,128.169,192.141,115.464,191.279,102.583z M161.417,58.53c6.189,8.4,10.135,18.425,15.454,27.402 c-12.457-1.817-24.333,2.749-36.521,4.821c-0.124-7.722-0.684-15.329-2.494-22.885c-0.784-3.274-1.382-9.745-3.313-13.538 C144.795,53.229,153.691,48.049,161.417,58.53z M152.719,152.356c-7.165,1.784-11.57-4.376-11.947-10.779 c-0.349-5.926,2.391-9.785,6.551-12.491c0.5-0.003,1.02-0.083,1.563-0.306C165.516,121.954,168.523,148.422,152.719,152.356z M184.865,119.228c-0.419,12.006,2.205,18.417-10.64,19.868c-0.391,0.044-0.715,0.182-1.03,0.326 c0.043-1.801-0.07-3.638-0.384-5.497c-2.27-13.481-15.706-19.988-27.689-14.071c-0.069,0.034-0.12,0.081-0.186,0.118 c-0.551,0.116-1.014,0.232-1.326,0.329c-2.79,0.863-5.258,2.868-7.229,4.956c-3.133,3.319-4.768,7.778-5.342,12.293 c-7.685-0.902-13.745-1.148-14.421-11.277c-0.822-12.316-1.382-24.647-1.769-36.986c-0.258-8.238-0.006-16.482-0.724-24.697 c-1.071-12.252,6.837-10.181,16.07-10.067c-0.892,3.203,0.264,8.369,0.513,10.471c1.189,10.058,2.04,19.841,2.268,30.016 c0.041,1.839,1.668,3.956,3.713,3.713c13.548-1.607,26.585-6.64,40.361-5.162c1.456,0.156,2.489-0.608,3.098-1.675 C184.397,100.638,185.23,108.716,184.865,119.228z"></path> <path d="M148.798,104.021c-2.817,0.006-5.708,1.161-8.411,1.87c-1.385,0.363-1.107,2.542,0.339,2.502 c2.765-0.075,5.923,0.227,8.574-0.665C151.28,107.062,150.996,104.017,148.798,104.021z"></path> </g> </g></svg>
+                <p class="text-black mx-4">Fish seed supply to 5,000-7,000 farmers a year</p>
+            </div>
+            <div>
+                <svg class="ml-36" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="60px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#5cb75c" d="M32,0C18.746,0,8,10.746,8,24c0,5.219,1.711,10.008,4.555,13.93c0.051,0.094,0.059,0.199,0.117,0.289l16,24 C29.414,63.332,30.664,64,32,64s2.586-0.668,3.328-1.781l16-24c0.059-0.09,0.066-0.195,0.117-0.289C54.289,34.008,56,29.219,56,24 C56,10.746,45.254,0,32,0z M32,32c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"></path> </g></svg>
+                <p class="text-black mx-4">64 district coverage through 98 sales points</p>
+            </div>
+        </div>
+    </section> -->
+
+      <!----------------------------------------NUMBERS Section-2 End ------------------------------------->
+
+
+      <!---------------------------------উৎপাদিত পোনাসমুহ Section-3 Start ------------------------------------->
+      
+      <section class="mt-16">
+        <div class="navbar bg-green-600 text-neutral-content flex justify-center items-center rounded-lg w-11/12 h-16 mt-9 mx-auto">
+            <h1 class="btn btn-ghost text-xl text-white">উৎপাদিত পোনাসমুহ</h1>
+        </div>
+    
+        <div class="w-3/4 mx-auto mt-10">
+            <div class="grid grid-cols-2 gap-2">
+                <div class="flex flex-col items-center">
+                    <img class="h-auto max-w-full rounded-lg" src="images/pic11.png" alt="">
+                    <a class="group text-green-500 transition-all duration-300 ease-in-out" >
+                        <span class="bg-left-bottom bg-gradient-to-r from-green-500 to-green-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out text-black font-extrabold text-xl">
+                            দ্রুত বর্ধনশিল তিলাপিয়ার প্রজাতি
+                        </span>
+                    </a>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img class="h-auto max-w-full rounded-lg" src="images/pic12.png" alt="">
+                    <a class="group text-green-500 transition-all duration-300 ease-in-out" >
+                        <span class="bg-left-bottom bg-gradient-to-r from-green-500 to-green-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out text-black font-extrabold text-xl">
+                            উন্নত ভ্যারাইটিজ কার্প
+                        </span>
+                    </a>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img class="h-auto max-w-full rounded-lg" src="images/pic13.png" alt="">
+                    <a class="group text-green-500 transition-all duration-300 ease-in-out" >
+                        <span class="bg-left-bottom bg-gradient-to-r from-green-500 to-green-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out text-black font-extrabold text-xl">
+                            ক্যাটফিশ
+                        </span>
+                    </a>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img class="h-auto max-w-full rounded-lg" src="images/pic14.png" alt="">
+                    <a class="group text-green-500 transition-all duration-300 ease-in-out" >
+                        <span class="bg-left-bottom bg-gradient-to-r from-green-500 to-green-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out text-black font-extrabold text-xl">
+                            চিংড়ি
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Show All Products Button -->
+        <div class="w-3/4 mx-auto mt-10 flex justify-center">
+            <a href="products.html" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 ease-in-out">
+                Show All Products
+            </a>
+        </div>
+    </section>
+    
+         <!---------------------------------উৎপাদিত পোনাসমুহ Section-3 End ------------------------------------->
+
+
+
+        <!---------------------------------সেবাসমুহ Section-4 Start ------------------------------------->
+
+
+
+        <section id="services" class="my-12">
+            <div class="divider divider-primary text-green-600 text-6xl mt-20 mb-20">সেবাসমুহ</div>
+            
+            <!-- Process Cards Container (Centered) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-12 max-w-screen-lg mx-auto">
+                
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img class="w-full h-64 object-cover" src="images/1.jpeg" alt="Individual Quick Freezing">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">বৈজ্ঞানিক ভাবে মাছ চাষের প্রশিক্ষন</h3>
+                        <p class="text-gray-600">মাছ চাষের পুকুরের কিছু বৈশিষ্ট্য থাকা দরকার যা চাষ প্রক্রিয়াকে লাভজনক করতে যথেষ্ট ভূমিকা রাখে। একটি আদর্শ মাছ ...</p>
+                        <a href="service1.html" class="text-blue-600 font-bold mt-4 inline-block hover:text-blue-800 transition duration-300">READ MORE</a>
+                    </div>
+                </div>
+        
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img class="w-full h-64 object-cover" src="images/2.jpeg" alt="Frozen Alive">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">বৈজ্ঞানিক উপায়ে দ্রুত সময়ে পোনা ডেলিভারি</h3>
+                        <p class="text-gray-600">দাস ফিশারিজ বৈজ্ঞানিক উপায়ে দ্রুত সময়ে পোনা ডেলিভারি নিশ্চিত করতে বেশ কিছু পদ্ধতি অনুসরণ করে। এসব পদ্ধতি মাছের স্বাস্থ্য ...</p>
+                        <a href="service2.html" class="text-blue-600 font-bold mt-4 inline-block hover:text-blue-800 transition duration-300">READ MORE</a>
+                    </div>
+                </div>
+        
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img class="w-full h-64 object-cover" src="images/3.jpeg" alt="Spiral Freezing">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">তরুনদের মাছ চাষে আগ্রহীকরন</h3>
+                        <p class="text-gray-600">বাংলাদেশে তরুণদের মাছ চাষে আগ্রহী করে তুলতে দাস ফিশারিজ বিভিন্ন কার্যক্রম ও উদ্যোগ গ্রহণ করে। এর মধ্যে অন্যতম হলো প্রশিক্ষণ ...</p>
+                        <a href="service3.html" class="text-blue-600 font-bold mt-4 inline-block hover:text-blue-800 transition duration-300">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+    
+        <!---------------------------------সেবাসমুহ Section-4 End ------------------------------------->
+
+
+<div style="height: 50px;"></div>
+
+        <!---------------------------------হ্যাচারি Section-5 Start ------------------------------------->
+
+
+        <section class="my-12 px-4 md:px-12 flex justify-center items-center">
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-10 max-w-6xl">
+                
+                <!-- Image Section -->
+                <div class="md:w-1/2 rounded-lg overflow-hidden flex justify-center">
+                    <img class="w-auto h-auto object-cover" src="images/4.jpeg" >
+                </div>
+        
+                <!-- Text Section -->
+                <div class="md:w-1/2 text-center md:text-left flex flex-col justify-center items-center md:items-start">
+                    <h2 class="text-3xl font-bold text-gray-800">হ্যাচারি</h2>
+                    <p class="mt-4 text-gray-600">
+                        দাস ফিশারিজের হ্যাচারি আধুনিক প্রযুক্তি ও বিজ্ঞানসম্মত পদ্ধতি অনুসরণ করে পোনা উৎপাদনের জন্য একটি গুরুত্বপূর্ণ স্থাপনা। এই হ্যাচারি বিভিন্ন প্রজাতির মাছের পোনা উৎপাদন করে, যা বাংলাদেশের মাছ চাষের জন্য অপরিহার্য। নিচে দাস ফিশারিজের হ্যাচারির কিছু মূল বৈশিষ্ট্য ও কার্যক্রম উল্লেখ করা হলো:
+                    </p>
+        
+                    <a href="hatchery.html" class="mt-6 inline-block bg-white border-2 border-gray-800 text-gray-800 font-bold py-2 px-6 rounded-full hover:bg-gray-800 hover:text-white transition">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+            
+            
+    
+        <!---------------------------------হ্যাচারি Section-6 End ------------------------------------->
+
+
+        <!-- <script>
+            document.querySelector('a[href="#services"]').addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent default anchor click behavior
+                
+                const targetSection = document.querySelector('#services');
+                const offset = 100; // Adjust this value to the height of your sticky navbar
+                
+                // Calculate the position of the target section
+                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - offset;
+                
+                // Scroll to the position smoothly
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        </script> -->
+<!-- 
+        <script>
+            document.getElementById('servicesLink').addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent default anchor click behavior
+                
+                const targetSection = document.querySelector('#services');
+                const navbarHeight = document.querySelector('.navbar').offsetHeight; // Get the height of the sticky navbar
+                
+                // Calculate the position of the target section and subtract the navbar height for proper offset
+                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                
+                // Smooth scroll to the target position
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        </script> -->
+
+        <!-- JavaScript for smooth scrolling -->
+        <script>
+            document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+              anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetID = this.getAttribute('href');
+                const targetElement = document.querySelector(targetID);
+                const offset = 100; // Adjust this value according to your sticky navbar height
+                
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+                
+                window.scrollTo({
+                  top: targetPosition,
+                  behavior: 'smooth'
+                });
+              });
+            });
+          
+            // Hamburger Menu Toggle
+            const hamburgerButton = document.getElementById('hamburger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            hamburgerButton.addEventListener('click', () => {
+              mobileMenu.classList.toggle('hidden'); // Toggles visibility of mobile menu
+            });
+          </script>
+
+             <!-- JavaScript for slide functionality -->
+             <script>
+                let currentSlide = 0;
+                const slides = document.querySelectorAll('.slide');
+        
+                function showSlide(index) {
+                    slides.forEach((slide, i) => {
+                        slide.classList.toggle('hidden', i !== index);
+                    });
+                }
+        
+                function nextSlide() {
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    showSlide(currentSlide);
+                }
+        
+                function prevSlide() {
+                    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                    showSlide(currentSlide);
+                }
+        
+                // Show the first slide initially
+                showSlide(currentSlide);
+        
+                // Auto-slide functionality
+                setInterval(nextSlide, 6000); // Changes slides every 3 seconds
+            </script>
+          
+          
+        
+
+
+
+        <!---------------------------------Foter  Section-5 Start ------------------------------------->
+        <section>
+            <footer class="footer footer-center bg-gray-950 text-base-content rounded p-10 mt-32">
+                <nav class="grid grid-flow-col gap-4 text-white">
+                    <a href="about.html" class="link link-hover">About us</a>
+                    <a href="contact.html" class="link link-hover">Contact</a>
+                    <a href="advise.html" class="link link-hover">Advises</a>
+                    <a href="gallery.html" class="link link-hover">Gallery</a>
+                </nav>
+                <nav>
+                    <div class="grid grid-flow-col gap-4">
+                        <!-- Twitter -->
+                        <a href="https://x.com/DasFisheries" target="_blank" class="hover-effect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                            </svg>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/DASFisheries" target="_blank" class="hover-effect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/dasfisheries/" target="_blank" class="hover-effect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.338 3.608 1.314.975.975 1.252 2.241 1.314 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.338 2.633-1.314 3.608-.975.975-2.241 1.252-3.608 1.314-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.338-3.608-1.314-.975-.975-1.252-2.241-1.314-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.338-2.633 1.314-3.608.975-.975 2.241-1.252 3.608-1.314 1.265-.058 1.645-.07 4.849-.07m0-2.163c-3.257 0-3.667.014-4.947.072-1.516.066-2.955.35-4.056 1.452-1.101 1.101-1.386 2.541-1.452 4.056-.058 1.28-.072 1.69-.072 4.947s.014 3.667.072 4.947c.066 1.516.35 2.955 1.452 4.056 1.101 1.101 2.541 1.386 4.056 1.452 1.28.058 1.69.072 4.947.072s3.667-.014 4.947-.072c1.516-.066 2.955-.35 4.056-1.452 1.101-1.101 1.386-2.541 1.452-4.056.058-1.28.072-1.69.072-4.947s-.014-3.667-.072-4.947c-.066-1.516-.35-2.955-1.452-4.056-1.101-1.101-2.541-1.386-4.056-1.452-1.28-.058-1.69-.072-4.947-.072zm0 5.838a6.165 6.165 0 1 0 0 12.33 6.165 6.165 0 0 0 0-12.33zm0 10.165a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 1 0-2.881 1.44 1.44 0 0 1 0 2.881z"></path>
+                            </svg>
+                        </a>
+                        <!-- Threads -->
+                        <a href="https://www.threads.net/@dasfisheries" target="_blank" class="hover-effect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                                <path d="M12.08 24C5.41 24 .18 18.65.18 12S5.42 0 12.08 0c6.63 0 11.87 5.35 11.87 12s-5.24 12-11.87 12zM12.08 1.77C6.32 1.77 1.95 6.31 1.95 12c0 5.67 4.38 10.2 10.13 10.2 5.71 0 10.12-4.51 10.12-10.2 0-5.68-4.41-10.2-10.12-10.2zm4.15 13.94c-.72-.09-.85-.37-.85-.37-.04-.03-2.44-1.43-2.96-1.88-.34.26-.73.41-1.14.42-1.29 0-2.34-1.21-2.34-2.71 0-1.57 1.16-2.77 2.68-2.77 1.55 0 2.67 1.3 2.67 2.84 0 .83-.3 1.58-.85 2.13.07.06 1.56.96 2.23 1.28.12-.25.18-.53.18-.82 0-.43-.16-.79-.44-1.01-.44-.33-1.12-.45-1.77-.42-.63.02-1.42.08-2.15.24-.54.12-.94-.35-1-.89s.32-1.05.86-1.13c.69-.12 1.51-.19 2.14-.24 1.05-.06 1.86-.18 2.48-.52.59-.33.88-.9.88-1.7-.01-1.2-.78-2.16-1.85-2.29-1.62-.21-2.81 1.19-3.04 1.56-.4.6-1.06.78-1.6.43-.52-.33-.66-1.06-.31-1.61.08-.12.8-1.18 1.86-1.76 1.18-.66 2.6-.79 3.88-.37 1.89.62 3.18 2.35 3.18 4.41 0 2.59-2.09 4.71-4.74 4.71-.23 0-.46-.01-.68-.03z"></path>
+                            </svg>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@dasfisheries" target="_blank" class="hover-effect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </nav>
+                <p class="text-white">Copyright © 2024 - All right reserved by Das Fisheries Ltd</p>
+            </footer>
+        </section>
+        
+        <style>
+            .hover-effect {
+                transition: transform 0.3s ease, color 0.3s ease;
+            }
+        
+            .hover-effect:hover {
+                transform: scale(1.2);
+                color: #1DA1F2; /* Or change to the color you prefer */
+            }
+        </style>
+        
+        
+                     
+
+        <!---------------------------------Foter  Section-5 End ------------------------------------->
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>দাস ফিশারিজ advise</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        body {
+            font-family: 'Tiro Bangla', serif;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+
+    <style>
+        body {
+            font-family: 'Tiro Bangla', serif;
+            font-family: Arial, sans-serif;
+        }
+        .carousel-text {
+            position: absolute;
+            z-index: 20;
+            color: white;
+            text-align: center;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); /* Centering */
+        }
+        .carousel-overlay {
+            background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay */
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 10;
+        }
+    </style>
+
+
+
+
+    
+    
+
+    
+</head>
+<body>
+
+
+    <!-----------------------------------------NavBar Start----------------------------------->
+    <section class="navbar bg-white sticky top-0 z-50 border-b border-gray-300 shadow-xl">
+        <div class="navbar-start">
+          <img class="h-14" src="images/logo_new.png" alt="">
+          <a class="btn btn-ghost normal-case text-2xl lg:text-3xl text-black ml-2" href="index.html">দাস ফিশারিজ</a>
+        </div>
+      
+        <!-- Hamburger Menu for Mobile -->
+        <div class="navbar-end lg:hidden">
+          <div class="dropdown dropdown-end relative">
+            <label tabindex="0" class="btn btn-ghost lg:hidden" id="hamburger-button">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+              </svg>
+            </label>
+            <ul id="mobile-menu" class="dropdown-content mt-3 p-2 shadow bg-white rounded-box w-52 hidden">
+              <li><a class="hover:bg-green-500" href="index.html">Home</a></li>
+              <li><a class="hover:bg-green-500" href="index.html#services">Services</a></li>
+              <li><a class="hover:bg-green-500" href="products.html">Products</a></li>
+              <li><a class="hover:bg-green-500" href="about.html">About</a></li>
+              <li><a class="hover:bg-green-500" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <!-- Full Menu for Desktop -->
+        <div class="navbar-end hidden lg:flex">
+          <a class="hover:bg-green-500 p-2 rounded mx-1" href="index.html">Home</a>
+          <a class="hover:bg-green-500 p-2 rounded mx-1" href="index.html#services">Services</a>
+          <a class="hover:bg-green-500 p-2 rounded mx-1" href="products.html">Products</a>
+          <a class="hover:bg-green-500 p-2 rounded mx-1" href="about.html">About</a>
+          <a class="hover:bg-green-500 p-2 rounded mx-1" href="contact.html">Contact</a>
+        </div>
+      </section>
+
+    <!-----------------------------------------NavBar end----------------------------------->
+
+
+
+
+
+
+
+
+
+    <section class="bg-white py-8">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-8">মাছ চাষীদের জন্য <span class="text-green-500">গুরুত্বপূর্ণ পরামর্শ</span></h2>
+    
+            <!-- FAQ Container -->
+            <div class="space-y-4">
+                <!-- Question 1 -->
+                <div>
+                    <button class="w-full text-left font-bold text-lg py-4 border-b border-gray-300 flex justify-between items-center focus:outline-none" onclick="toggleFaq(1)">
+                        অতিবৃষ্টির পর মাছ চাষীদের করণীয়
+                        <span id="icon-1" class="transform transition-transform duration-300">&#9654;</span>
+                    </button>
+                    <div id="faq-1" class="max-h-0 overflow-hidden transition-max-height duration-500">
+                        <ul class="p-4 text-gray-600 list-disc list-inside space-y-2">
+                            <li><strong>পানি পরীক্ষা :</strong> প্রথমে পুকুরের ওয়াটার কোয়ালিটি টেস্ট করতে হবে ।পিএইচ, অক্সিজেনের স্তর এবং বিষাক্ত পদার্থের উপস্থিতি পরীক্ষা করা উচিত।</li>
+                            <li><strong>পানি নিষ্কাশন: </strong>অতিরিক্ত জল জমে থাকলে তা বের করার ব্যবস্থা করতে হবে। জল স্তরের সঠিক পরিমাণ বজায় রাখা জরুরি।</li>
+                            <li><strong>পুকুরের যত্ন: </strong>পুকুরের ধীরে ধীরে জমে থাকা কাঁদা, পাতা ও অন্যান্য আবর্জনা পরিষ্কার করতে হবে।</li>
+                            <li><strong>ফিডিং মনিটর করা: </strong>মাছের খাদ্য এবং পুষ্টি পর্যবেক্ষণ করতে হবে, কারণ অতিবৃষ্টি খাদ্যের উৎসকে প্রভাবিত করতে পারে।</li>
+                            <li><strong>মাছের স্বাস্থ্য পরীক্ষা: </strong>মাছের স্বাস্থ্যের ওপর নজর রাখতে হবে। কোনও অসুস্থ মাছ দেখা গেলে তা দ্রুত বিচ্ছিন্ন করতে হবে এবং তৎক্ষণাৎ ফিশারিজ কনসাল্টেন্ট এর সাথে যোগাযোগ করতে হবে।</li>      
+                            <li><strong>রোগ প্রতিরোধ: </strong>অতিবৃষ্টির পর মাছের রোগ বৃদ্ধি পেতে পারে। নিয়মিত স্বাস্থ্য পরীক্ষার পাশাপাশি ফিশারিজ কনসাল্টেন্ট এর পরামর্শ অনুযায়ী  প্রয়োজনীয় প্রতিকার নিতে হবে।</li>
+                            <li><strong>ফিশারিজ কনসাল্টেন্ট এর সাথে যোগাযগঃ </strong>যে কোনও সমস্যা বা উদ্বেগের ক্ষেত্রে  অভিজ্ঞ ফিশারিজ কনসাল্টেন্ট/মৎস্য অফিসারের পরামর্শ নেওয়া উচিত।</li>
+                            <p class="p-4 text-gray-600">
+                                <strong> এই পদক্ষেপগুলো অনুসরণ করলে মাছ চাষীরা অতিবৃষ্টির পর পরিস্থিতি সামলাতে এবং মাছের স্বাস্থ্য সুরক্ষিত রাখতে পারবেন।</strong>
+                            </p>
+                            
+                        </ul>
+                    </div>
+
+                </div>
+    
+                <!-- Question 2 -->
+                <div>
+                    <button class="w-full text-left font-bold text-lg py-4 border-b border-gray-300 flex justify-between items-center focus:outline-none" onclick="toggleFaq(2)">
+                        কেন তেলাপিয়া মাছ চাষ করবো?
+                        <span id="icon-2" class="transform transition-transform duration-300">&#9654;</span>
+                    </button>
+                    <div id="faq-2" class="max-h-0 overflow-hidden transition-max-height duration-500">
+                        <ul class="p-4 text-gray-600 list-disc list-inside space-y-2">
+                            <li>অতি দ্রুত বৃদ্ধির হার</li>
+                            <li>নিম্ন উৎপাদন খরচ</li>
+                            <li>পানির সামান্য প্রয়োজন</li>
+                            <li>বাজারে চাহিদা</li>
+                            <li>পুষ্টিগুণ (প্রতি ১০০ গ্রাম মাছে):</li>
+                            <ul class="ml-6 list-disc list-inside">
+                                <li>প্রোটিন: ১৮-২০%</li>
+                                <li>ফ্যাট: ১-৫%</li>
+                                <li>অ্যাস: ১-২%</li>
+                                <li>শর্করা: ১%</li>
+                            </ul>
+                            <li>সেলেনিয়াম ও ভিটামিন যা ব্রেইন ডেভেলপমেন্টে সাহায্য করে</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                                <!-- Question 3 -->
+                <div>
+                    <button class="w-full text-left font-bold text-lg py-4 border-b border-gray-300 flex justify-between items-center focus:outline-none" onclick="toggleFaq(3)">
+                        চুন দেওয়ার সতর্কতা
+                        <span id="icon-3" class="transform transition-transform duration-300">&#9654;</span>
+                    </button>
+                    <div id="faq-3" class="max-h-0 overflow-hidden transition-max-height duration-500">
+                        <ul class="p-4 text-gray-600 list-disc list-inside space-y-2">
+                            <p class="p-4 text-gray-600">
+                                পুকুরে চুন ক্ষেত্রে কিছু সতর্কতা অবলম্বন করা জরুরি। দাস  ফিশারিজের পরামর্শ অনুযায়ী, নিম্নলিখিত বিষয়গুলো খেয়াল রাখতে হবে:
+                            </p>
+                            <li> <strong>পানি পরীক্ষার পর চুন প্রয়োগ: </strong>পুকুরের পানি পরীক্ষা করে পিএইচ স্তর নির্ধারণ করুন। প্রয়োজন অনুযায়ী চুন প্রয়োগ করুন। <strong> যদি পিএইচ ৬.৫ এর নিচে হয় </strong> তাহলে চুন প্রয়োগ করা উচিত, কারণ এ ক্ষেত্রে পুকুরের পানি অম্লীয় হয়ে যায় এবং মাছের জন্য ক্ষতিকর হতে পারে। </li>
+                            <li><strong>পরিমিত মাত্রায় প্রয়োগ: </strong>অতিরিক্ত চুন প্রয়োগ করা উচিৎ নয়, কারণ এটি জল স্বাস্থ্যের জন্য ক্ষতিকর হতে পারে। ফিশারিজ কনসাল্টেন্ট এর পরামর্শ নিন।</li>
+                            <li><strong>পুকুরের যত্ন: </strong>: চুন প্রয়োগের পর তা ভালোভাবে মিশে যাওয়া নিশ্চিত করুন, যাতে সব জায়গায় সমানভাবে ছড়িয়ে যায়।</li>
+                            <li><strong>মিশ্রণ নিশ্চিত করা: </strong>মাছের খাদ্য এবং পুষ্টি পর্যবেক্ষণ করতে হবে, কারণ অতিবৃষ্টি খাদ্যের উৎসকে প্রভাবিত করতে পারে।</li>
+                            <li><strong>সময়ের উপর নজর রাখা: </strong>চুন প্রয়োগের পর অন্তত ২৪-৪৮ ঘণ্টা অপেক্ষা করুন, তারপর মাছের খাদ্য দেওয়া শুরু করুন।</li>      
+                            
+                            <p class="p-4 text-gray-600">
+                                রাসায়নিক সার ও চুন ব্যবহারের ক্ষেত্রে সতর্ক থাকুন এবং রাসায়নিকগুলোর সংমিশ্রণের ফলে মাছের উপর প্রভাব পড়ে কিনা তা বুঝুন। যদি কোনো সন্দেহ থাকে, তাহলে ফিশারিজ কনসাল্টেন্ট বা স্থানীয় মৎস্য অফিসারের পরামর্শ নিন।
+                            </p>
+
+                            <p class="p-4 text-gray-600">
+                                এই সতর্কতা অবলম্বন করলে পুকুরের পানি এবং মাছের স্বাস্থ্যের সুরক্ষা নিশ্চিত করা সম্ভব।
+                            </p>
+                            
+                        </ul>
+                    </div>
+
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+    <!-- JavaScript to handle FAQ toggling -->
+    <script>
+        function toggleFaq(index) {
+            const faq = document.getElementById(`faq-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
+    
+            if (faq.style.maxHeight) {
+                faq.style.maxHeight = null;
+                icon.style.transform = "rotate(0deg)";
+            } else {
+                faq.style.maxHeight = faq.scrollHeight + "px";
+                icon.style.transform = "rotate(90deg)";
+            }
+        }
+    </script>
+
+            <!-- JavaScript for smooth scrolling -->
+            <script>
+                document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+                  anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetID = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetID);
+                    const offset = 100; // Adjust this value according to your sticky navbar height
+                    
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+                    
+                    window.scrollTo({
+                      top: targetPosition,
+                      behavior: 'smooth'
+                    });
+                  });
+                });
+              
+                // Hamburger Menu Toggle
+                const hamburgerButton = document.getElementById('hamburger-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+                
+                hamburgerButton.addEventListener('click', () => {
+                  mobileMenu.classList.toggle('hidden'); // Toggles visibility of mobile menu
+                });
+              </script>
+    
+
+
+
+        <!---------------------------------Foter  Section-5 Start ------------------------------------->
+        <section>
+            <footer class="footer footer-center bg-gray-950 text-base-content rounded p-10 mt-32">
+                <nav class="grid grid-flow-col gap-4 text-white">
+                    <a href="about.html" class="link link-hover">About us</a>
+                    <a href="contact.html" class="link link-hover">Contact</a>
+                    <a href="advise.html" class="link link-hover">Advises</a>
+                    <a href="gallery.html" class="link link-hover">Gallery</a>
+                </nav>
+                <nav>
+                    <div class="grid grid-flow-col gap-4">
+                        <!-- Twitter -->
+                        <a href="https://x.com/DasFisheries" target="_blank" class="hover-effect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                            </svg>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/DASFisheries" target="_blank" class="hover-effect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/dasfisheries/" target="_blank" class="hover-effect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.338 3.608 1.314.975.975 1.252 2.241 1.314 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.338 2.633-1.314 3.608-.975.975-2.241 1.252-3.608 1.314-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.338-3.608-1.314-.975-.975-1.252-2.241-1.314-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.338-2.633 1.314-3.608.975-.975 2.241-1.252 3.608-1.314 1.265-.058 1.645-.07 4.849-.07m0-2.163c-3.257 0-3.667.014-4.947.072-1.516.066-2.955.35-4.056 1.452-1.101 1.101-1.386 2.541-1.452 4.056-.058 1.28-.072 1.69-.072 4.947s.014 3.667.072 4.947c.066 1.516.35 2.955 1.452 4.056 1.101 1.101 2.541 1.386 4.056 1.452 1.28.058 1.69.072 4.947.072s3.667-.014 4.947-.072c1.516-.066 2.955-.35 4.056-1.452 1.101-1.101 1.386-2.541 1.452-4.056.058-1.28.072-1.69.072-4.947s-.014-3.667-.072-4.947c-.066-1.516-.35-2.955-1.452-4.056-1.101-1.101-2.541-1.386-4.056-1.452-1.28-.058-1.69-.072-4.947-.072zm0 5.838a6.165 6.165 0 1 0 0 12.33 6.165 6.165 0 0 0 0-12.33zm0 10.165a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 1 0-2.881 1.44 1.44 0 0 1 0 2.881z"></path>
+                            </svg>
+                        </a>
+                        <!-- Threads -->
+                        <a href="https://www.threads.net/@dasfisheries" target="_blank" class="hover-effect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                                <path d="M12.08 24C5.41 24 .18 18.65.18 12S5.42 0 12.08 0c6.63 0 11.87 5.35 11.87 12s-5.24 12-11.87 12zM12.08 1.77C6.32 1.77 1.95 6.31 1.95 12c0 5.67 4.38 10.2 10.13 10.2 5.71 0 10.12-4.51 10.12-10.2 0-5.68-4.41-10.2-10.12-10.2zm4.15 13.94c-.72-.09-.85-.37-.85-.37-.04-.03-2.44-1.43-2.96-1.88-.34.26-.73.41-1.14.42-1.29 0-2.34-1.21-2.34-2.71 0-1.57 1.16-2.77 2.68-2.77 1.55 0 2.67 1.3 2.67 2.84 0 .83-.3 1.58-.85 2.13.07.06 1.56.96 2.23 1.28.12-.25.18-.53.18-.82 0-.43-.16-.79-.44-1.01-.44-.33-1.12-.45-1.77-.42-.63.02-1.42.08-2.15.24-.54.12-.94-.35-1-.89s.32-1.05.86-1.13c.69-.12 1.51-.19 2.14-.24 1.05-.06 1.86-.18 2.48-.52.59-.33.88-.9.88-1.7-.01-1.2-.78-2.16-1.85-2.29-1.62-.21-2.81 1.19-3.04 1.56-.4.6-1.06.78-1.6.43-.52-.33-.66-1.06-.31-1.61.08-.12.8-1.18 1.86-1.76 1.18-.66 2.6-.79 3.88-.37 1.89.62 3.18 2.35 3.18 4.41 0 2.59-2.09 4.71-4.74 4.71-.23 0-.46-.01-.68-.03z"></path>
+                            </svg>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@dasfisheries" target="_blank" class="hover-effect">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </nav>
+                <p class="text-white">Copyright © 2024 - All right reserved by Das Fisheries Ltd</p>
+            </footer>
+        </section>
+        
+        <style>
+            .hover-effect {
+                transition: transform 0.3s ease, color 0.3s ease;
+            }
+        
+            .hover-effect:hover {
+                transform: scale(1.2);
+                color: #1DA1F2; /* Or change to the color you prefer */
+            }
+        </style>
+        
+        
+                     
+
+        <!---------------------------------Foter  Section-5 End ------------------------------------->
+  
+  </body>
+  
+  </html>
+
+
+
+  <!-- <div id="faq-1" class="max-h-0 overflow-hidden transition-max-height duration-500">
+    <p class="p-4 text-gray-600">
+        ১. পানি পরীক্ষা : প্রথমে পুকুরের ওয়াটার কোয়ালিটি টেস্ট করতে হবে ।<br>
+        ২. পানি নিষ্কাশন: অতিরিক্ত জল বের করে স্তর ঠিক রাখতে হবে।<br>
+        ৩. পুকুরের যত্ন: কাঁদা ও আবর্জনা পরিষ্কার করতে হবে।<br>
+        ৪. ফিডিং মনিটর: খাবার ও পুষ্টি পর্যবেক্ষণ করা।<br>
+        ৫. মাছের স্বাস্থ্য পরীক্ষা: অসুস্থ মাছ থাকলে বিচ্ছিন্ন করুন।<br>
+        ৬. রোগ প্রতিরোধ: রোগ বাড়লে কনসাল্টেন্টের পরামর্শ নিতে হবে।<br>
+        ৭. ফিশারিজ কনসাল্টেন্টের সাথে যোগাযোগ: যেকোনো সমস্যায় দ্রুত পদক্ষেপ নিন। <br>
+        এই পদক্ষেপগুলো অনুসরণ করলে মাছ চাষীরা অতিবৃষ্টির পর পরিস্থিতি সামলাতে এবং মাছের স্বাস্থ্য সুরক্ষিত রাখতে পারবেন।
+    </p>
+</div> -->

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>দাস ফিশারিজ - products</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script src="app.js"></script>
+
+
+
+    <style>
+        body {
+            font-family: 'Tiro Bangla', serif;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+
+    <style>
+        body {
+            font-family: 'Tiro Bangla', serif;
+            font-family: Arial, sans-serif;
+        }
+        .carousel-text {
+            position: absolute;
+            z-index: 20;
+            color: white;
+            text-align: center;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); /* Centering */
+        }
+        .carousel-overlay {
+            background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay */
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 10;
+        }
+    </style>
+
+</head>
+
+<!-- navbar start -->
+
+<section class="navbar bg-white sticky top-0 z-50 border-b border-gray-300 shadow-xl">
+  <div class="navbar-start">
+    <img class="h-14" src="images/logo_new.png" alt="">
+    <a class="btn btn-ghost normal-case text-2xl lg:text-3xl text-black ml-2" href="index.html">দাস ফিশারিজ</a>
+  </div>
+
+  <!-- Hamburger Menu for Mobile -->
+  <div class="navbar-end lg:hidden">
+    <div class="dropdown dropdown-end relative">
+      <label tabindex="0" class="btn btn-ghost lg:hidden" id="hamburger-button">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
+      </label>
+      <ul id="mobile-menu" class="dropdown-content mt-3 p-2 shadow bg-white rounded-box w-52 hidden">
+        <li><a class="hover:bg-green-500" href="index.html">Home</a></li>
+        <li><a class="hover:bg-green-500" href="index.html#services">Services</a></li>
+        <li><a class="hover:bg-green-500" href="products.html">Products</a></li>
+        <li><a class="hover:bg-green-500" href="about.html">About</a></li>
+        <li><a class="hover:bg-green-500" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Full Menu for Desktop -->
+  <div class="navbar-end hidden lg:flex">
+    <a class="hover:bg-green-500 p-2 rounded mx-1" href="index.html">Home</a>
+    <a class="hover:bg-green-500 p-2 rounded mx-1" href="index.html#services">Services</a>
+    <a class="hover:bg-green-500 p-2 rounded mx-1" href="products.html">Products</a>
+    <a class="hover:bg-green-500 p-2 rounded mx-1" href="about.html">About</a>
+    <a class="hover:bg-green-500 p-2 rounded mx-1" href="contact.html">Contact</a>
+  </div>
+</section>
+
+<!-- navbar end -->
+
+<!-- title section  start-->
+
+<section class="bg-gradient-to-b from-green-500 to-green-700 text-center py-16">
+    <div class="container mx-auto px-4">
+        <h1 class="text-white text-2xl md:text-xl font-bold mb-4">Leading the Way in Quality Fish Seed and Medicine</h1>
+        <p class="text-white text-lg md:text-xl mb-8">At DAS Fisheries, we are dedicated to providing the finest fish seeds and health solutions for aquaculture. Our rigorous quality control measures include analyzing the proximate composition of our fish in a renowned laboratory in Bangladesh, ensuring that our products are rich in essential nutrients. By meticulously selecting our broodstock, we guarantee the highest quality and health in our fish, giving you confidence in your aquaculture investments.</p>
+        
+    </div>
+</section>
+
+<!-- title section  end-->
+
+
+
+<!-- Products part start -->
+
+<!-- Products part start -->
+<section class="bg-gray-100 py-16">
+  <div class="container mx-auto px-4">
+
+    <!-- Filter Dropdown -->
+    <div class="flex justify-center mb-8">
+      <select id="fish-filter" class="bg-white p-3 rounded-lg shadow-md" onchange="filterFish()">
+        <option value="all">All</option>
+        <option value="carp">Carp</option>
+        <option value="catfish">Catfish</option>
+        <option value="whitefish">White fish</option>
+      </select>
+    </div>
+
+    <!-- Fish Items -->
+    <div id="fish-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+      <!-- Fish Item 1: Rui -->
+      <div class="fish-item group carp bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out relative" onclick="openPopup('Rui', 'Labeo rohita', 'images/pic15.jpg', ruiDetails)">
+        <div class="relative">
+          <img src="images/pic15.jpg" alt="Rui" class="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-t-2xl">
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50 transition-opacity duration-300 group-hover:opacity-75 rounded-t-2xl"></div>
+        </div>
+        <div class="p-4 text-center">
+          <h3 class="text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300">Rui</h3>
+          <p class="text-sm text-gray-500">Labeo rohita</p>
+        </div>
+      </div>
+
+      <!-- Fish Item 2: Catla -->
+      <div class="fish-item group carp bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out relative" onclick="openPopup('Catla', 'Catla Catla', 'images/pic16.jpg', catlaDetails)">
+        <div class="relative">
+          <img src="images/pic16.jpg" alt="Catla" class="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-t-2xl">
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50 transition-opacity duration-300 group-hover:opacity-75 rounded-t-2xl"></div>
+        </div>
+        <div class="p-4 text-center">
+          <h3 class="text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300">Catla</h3>
+          <p class="text-sm text-gray-500">Catla catla</p>
+        </div>
+      </div>
+
+      <!-- Fish Item 3: Tilapia -->
+      <div class="fish-item group whitefish bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out relative" onclick="openPopup('Tilapia', 'Oreochromis niloticus', 'images/pic17.jpg', tilapiaDetails)">
+        <div class="relative">
+          <img src="images/pic17.jpg" alt="Tilapia" class="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-t-2xl">
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50 transition-opacity duration-300 group-hover:opacity-75 rounded-t-2xl"></div>
+        </div>
+        <div class="p-4 text-center">
+          <h3 class="text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300">Tilapia</h3>
+          <p class="text-sm text-gray-500">Oreochromis niloticus</p>
+        </div>
+      </div>
+
+      <!-- Fish Item 4: Mrigel -->
+      <div class="fish-item group carp bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out relative" onclick="openPopup('Mrigel', 'Cirrhinus cirrhosus', 'images/Mirgel.jpg', mrigelDetails)">
+        <div class="relative">
+          <img src="images/Mirgel.jpg" alt="Mrigel" class="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-t-2xl">
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50 transition-opacity duration-300 group-hover:opacity-75 rounded-t-2xl"></div>
+        </div>
+        <div class="p-4 text-center">
+          <h3 class="text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300">Mrigel</h3>
+          <p class="text-sm text-gray-500">Cirrhinus cirrhosus</p>
+        </div>
+      </div>
+
+      <!-- Fish Item 5: Shing -->
+      <div class="fish-item group catfish bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out relative" onclick="openPopup('Shing', 'Heteropneustes fossilis', 'images/shing.jpg', shingDetails)">
+        <div class="relative">
+          <img src="images/shing.jpg" alt="Shing" class="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-t-2xl">
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50 transition-opacity duration-300 group-hover:opacity-75 rounded-t-2xl"></div>
+        </div>
+        <div class="p-4 text-center">
+          <h3 class="text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300">Shing</h3>
+          <p class="text-sm text-gray-500">Heteropneustes fossilis</p>
+        </div>
+      </div>
+
+      <!-- Fish Item 6: koi -->
+      <div class="fish-item group whitefish bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out relative" onclick="openPopup('Koi', 'Anabus testudineus', 'images/koi2.png', koiDetails)">
+        <div class="relative">
+          <img src="images/koi2.png" alt="koi" class="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-t-2xl">
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50 transition-opacity duration-300 group-hover:opacity-75 rounded-t-2xl"></div>
+        </div>
+        <div class="p-4 text-center">
+          <h3 class="text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300">koi</h3>
+          <p class="text-sm text-gray-500">Anabus testudineus</p>
+        </div>
+      </div>
+
+      <!-- Fish Item 7: Pabda  -->
+      <div class="fish-item group catfish bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out relative" onclick="openPopup('Pabda ', 'Ompok pabo', 'images/pabda.jpg', pabdaDetails)">
+        <div class="relative">
+          <img src="images/pabda.jpg" alt="koi" class="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-t-2xl">
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50 transition-opacity duration-300 group-hover:opacity-75 rounded-t-2xl"></div>
+        </div>
+        <div class="p-4 text-center">
+          <h3 class="text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300">Pabda </h3>
+          <p class="text-sm text-gray-500">Ompok pabo</p>
+        </div>
+      </div>
+
+      <!-- Fish Item 8: Tengra  -->
+      <div class="fish-item group catfish bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out relative" onclick="openPopup('Tengra', 'Mystus gulio', 'images/tengra.jpg', tengraDetails)">
+        <div class="relative">
+          <img src="images/tengra.jpg" alt="koi" class="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-t-2xl">
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50 transition-opacity duration-300 group-hover:opacity-75 rounded-t-2xl"></div>
+        </div>
+        <div class="p-4 text-center">
+          <h3 class="text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300">Tengra </h3>
+          <p class="text-sm text-gray-500">Mystus gulio</p>
+        </div>
+      </div>
+
+      <!-- Fish Item 9: gulsha  -->
+      <div class="fish-item group catfish bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out relative" onclick="openPopup('Gulsha', 'Mystus cavasius', 'images/gulsha.jpeg', gulshaDetails)">
+        <div class="relative">
+          <img src="images/gulsha.jpeg" alt="koi" class="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-t-2xl">
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50 transition-opacity duration-300 group-hover:opacity-75 rounded-t-2xl"></div>
+        </div>
+        <div class="p-4 text-center">
+          <h3 class="text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300">Gulsha </h3>
+          <p class="text-sm text-gray-500">Mystus gulio</p>
+        </div>
+      </div>
+
+      <!-- Fish Item 10: Pangas   -->
+      <div class="fish-item group catfish bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out relative" onclick="openPopup('Pangas', 'Pangasius pangasius', 'images/pangas.jpeg', pangasDetails)">
+        <div class="relative">
+          <img src="images/pangas.jpeg" alt="koi" class="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-t-2xl">
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50 transition-opacity duration-300 group-hover:opacity-75 rounded-t-2xl"></div>
+        </div>
+        <div class="p-4 text-center">
+          <h3 class="text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300">Pangas</h3>
+          <p class="text-sm text-gray-500">Pangasius pangasius</p>
+        </div>
+      </div>
+
+      <!-- Add more fish items similarly -->
+    </div>
+  </div>
+</section>
+<!-- Products part end -->
+
+<!-- Pop-up Modal start -->
+
+<!-- Pop-up Modal start -->
+<div id="popup-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 hidden transition-opacity duration-300 ease-in-out">
+  <div class="bg-white p-8 rounded-xl shadow-2xl w-10/12 sm:w-4/5 md:w-3/5 lg:w-1/2 xl:w-2/5 relative max-h-screen overflow-hidden">
+    <!-- Close Button -->
+    <button class="absolute top-3 right-4 text-gray-400 hover:text-gray-600 text-3xl font-bold focus:outline-none transition duration-200 ease-in-out" onclick="closePopup()">
+      &times;
+    </button>
+    <!-- Scrollable Content -->
+    <div class="text-center overflow-y-auto max-h-[90vh] p-1">
+      <img id="popup-image" src="" alt="Fish Image" class="w-64 h-64 object-cover rounded-full mx-auto mb-6 shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110">
+      <h3 id="popup-title" class="text-3xl font-semibold text-gray-800 mb-2 tracking-wide">Fish Title</h3>
+      <p id="popup-subtitle" class="text-gray-500 text-lg mb-6">Scientific Name</p>
+      <p id="popup-description" class="text-gray-700 leading-relaxed mb-6"></p>
+      <ul id="popup-details" class="list-none space-y-3 text-left text-gray-700"></ul>
+      <!-- Learn More Button -->
+      <button id="learn-more-btn" onclick="openPDF()" class="mt-6 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-300">Learn More</button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Pop-up Modal end -->
+
+<script>
+// Fish details for different types of fish
+const ruiDetails = {
+  description: "A staple in South Asian aquaculture, our rui seeds guarantee strong and healthy fish for your ponds.",
+  nutrients: [
+    { label: "Moisture", value: "Approximately 75-80%" },
+    { label: "Protein", value: "About 16-20%" },
+    { label: "Fat", value: "Typically 5-10%" },
+    { label: "Ash", value: "Roughly 1-2%" },
+    { label: "Carbohydrates", value: "Minimal, often negligible" }
+  ],
+  showLearnMore: true, // Show Learn More button for Rui
+  pdfLink: "images/Rui.jpeg"
+};
+
+// Details for catla
+const catlaDetails = {
+  description: "Catla is known for being a rich source of high-quality protein and essential fatty acids, making it a valuable fish in many dietary practices.",
+  nutrients: [
+    { label: "Moisture", value: "75-80%" },
+    { label: "Protein", value: "15-18%" },
+    { label: "Fat", value: "5-8%" },
+    { label: "Ash", value: "1-2%" },
+    { label: "Carbohydrates", value: "Low, typically below 5%" }
+  ],
+  showLearnMore: true, // Show Learn More button for catla
+  pdfLink: "pdfs/catla.pdf"
+};
+
+// Details for Tilapia 
+const tilapiaDetails = {
+  description: "Known for its rapid growth and adaptability, our tilapia seeds are perfect for both commercial and small-scale farming. The variant used I the hatchery are GIFT, AIT, Tiger etc.",
+  nutrients: [
+    { label: "Moisture", value: "70-80%" },
+    { label: "Protein", value: "About 18-20%" },
+    { label: "Fat", value: "Typically 1-5%" },
+    { label: "Ash", value: "1-2%" },
+    { label: "Carbohydrates", value: "Minimal, often negligible" }
+  ],
+  showLearnMore: true, // Show Learn More button for Rui
+  pdfLink: "pdfs/Talapiya.pdf"
+};   
+
+// Details for mrigel 
+const mrigelDetails = {
+  description: "Mrigal is another important source of protein, with lower fat content compared to some other freshwater fish, which makes it a popular choice for healthy diets.",
+  nutrients: [
+    { label: "Moisture", value: "70-80%" },
+    { label: "Protein", value: "15-20%" },
+    { label: "Fat", value: "1-5%" },
+    { label: "Ash", value: "1-2%" },
+    { label: "Carbohydrates", value: "<1% (usually negligible)" }
+  ],
+    showLearnMore: false, // Hide Learn More button for Mrigel
+    pdfLink: "" // No PDF link needed
+}; 
+
+// Details for shing
+const shingDetails = {
+  description: "We offer high-quality shing seeds that are well-suited for sustainable farming practices.",
+  nutrients: [
+    { label: "Moisture", value: ": 75-80%" },
+    { label: "Protein", value: "16-20%" },
+    { label: "Fat", value: "3-6%" },
+    { label: "Ash", value: "1-2%" },
+    { label: "Carbohydrates", value: "Minimal, often negligible" }
+  ],
+  showLearnMore: false, // Hide Learn More button for Mrigel
+  pdfLink: "" // No PDF link needed
+}; 
+
+// Details for koi
+const koiDetails = {
+  description: "Our Koi seeds are bred for optimal growth and excellent flavor, perfect for aquaculture operations.",
+  nutrients: [
+    { label: "Moisture", value: ": 75-80%" },
+    { label: "Protein", value: "15-18%" },
+    { label: "Fat", value: "3-6%" },
+    { label: "Ash", value: "1-2%" },
+    { label: "Carbohydrates", value: "Minimal, often negligible" }
+  ],
+  showLearnMore: false, // Hide Learn More button for Mrigel
+  pdfLink: "" // No PDF link needed
+}; 
+
+// Details for pabda 
+const pabdaDetails = {
+  description: "Our pabda seeds are sourced from healthy broodstock, ensuring robust and high-yielding fish.",
+  nutrients: [
+    { label: "Moisture", value: "Approximately 75-80%" },
+    { label: "Protein", value: "About 16-20%" },
+    { label: "Fat", value: "Typically 4-8%" },
+    { label: "Ash", value: "Roughly 1-2%" },
+    { label: "Carbohydrates", value: "Minimal, often negligible" }
+  ],
+  showLearnMore: true, // Show Learn More button for Rui
+  pdfLink: "pdfs/Pabda.pdf"
+};   
+
+// Details for Tengra 
+const tengraDetails = {
+  description: "Tengra is a small to medium-sized brackish water catfish, known for being a good source of protein with relatively low fat content. The specific composition may vary slightly based on environmental conditions, the fish’s diet, and maturity.",
+  nutrients: [
+    { label: "Moisture", value: "75-80%" },
+    { label: "Protein", value: "15-20%" },
+    { label: "Fat", value: "2-5%" },
+    { label: "Ash", value: "1-2%" },
+    { label: "Carbohydrates", value: "<1% (negligible)" }
+  ],
+  showLearnMore: true, // Show Learn More button for Rui
+  pdfLink: "pdfs/Tengra.pdf"
+}; 
+
+// Details for gulsha
+const gulshaDetails = {
+  description: "Known for its tender flesh and rich taste, our Gulsha seeds offer an excellent option for a sustainable and productive fish farming experience.",
+  nutrients: [
+    { label: "Moisture", value: " usually between 70-80%" },
+    { label: "Protein", value: "generally in the range of 17-22%" },
+    { label: "Fat", value: "Typically 3-7%" },
+    { label: "Ash", value: "typically low, around 1-2%." },
+    { label: "Carbohydrates", value: "Minimal, often negligible" }
+  ],
+  showLearnMore: true, // Show Learn More button for Rui
+  pdfLink: "pdfs/Gulsha.pdf"
+}; 
+
+
+// Details for Pangas
+const pangasDetails = {
+  description: "A popular choice in aquaculture due to its fast growth and adaptability, our pangas seeds offer a reliable option for both small and large-scale fish farming.",
+  nutrients: [
+    { label: "Moisture", value: "Approximately 76-80%" },
+    { label: "Protein", value: "About 15-20%" },
+    { label: "Fat", value: "Typically 2-5% (Pangas is known for being a low-fat fish)" },
+    { label: "Ash", value: "Roughly 1-2%" },
+    { label: "Carbohydrates", value: "Minimal, often negligible" }
+  ],
+  showLearnMore: true, // Show Learn More button for Rui
+  pdfLink: "pdfs/Pangash.pdf"
+}; 
+
+// Add similar details for other fish types...
+
+// Function to filter fish items
+function filterFish() {
+  const filter = document.getElementById('fish-filter').value;
+  const fishItems = document.querySelectorAll('.fish-item');
+
+  fishItems.forEach(item => {
+    if (filter === 'all') {
+      item.style.display = 'block';
+    } else if (item.classList.contains(filter)) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
+
+
+// Function to open the pop-up modal
+function openPopup(title, subtitle, imgSrc, details) {
+  document.getElementById('popup-title').innerText = title;
+  document.getElementById('popup-subtitle').innerText = subtitle;
+  document.getElementById('popup-image').src = imgSrc;
+  document.getElementById('popup-description').innerText = details.description;
+
+  const detailsList = document.getElementById('popup-details');
+  detailsList.innerHTML = ''; // Clear previous details
+  details.nutrients.forEach(nutrient => {
+    const li = document.createElement('li');
+    li.innerHTML = `<strong>${nutrient.label}:</strong> ${nutrient.value}`;
+    detailsList.appendChild(li);
+  });
+
+  // Conditionally show or hide the learn more button
+  const learnMoreBtn = document.getElementById('learn-more-btn');
+  if (details.showLearnMore) {
+    learnMoreBtn.style.display = 'inline-block';
+    learnMoreBtn.onclick = function() {
+      window.open(details.pdfLink, '_blank');
+    };
+  } else {
+    learnMoreBtn.style.display = 'none';
+  }
+
+  // Show the modal
+  document.getElementById('popup-modal').classList.remove('hidden');
+  document.getElementById('popup-modal').classList.add('flex');
+}
+
+// Function to close the pop-up modal
+function closePopup() {
+  document.getElementById('popup-modal').classList.add('hidden');
+  document.getElementById('popup-modal').classList.remove('flex');
+}
+</script>
+
+  <!-- Pop-up Modal end -->
+
+
+          <!-- JavaScript for smooth scrolling -->
+          <script>
+            document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+              anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetID = this.getAttribute('href');
+                const targetElement = document.querySelector(targetID);
+                const offset = 100; // Adjust this value according to your sticky navbar height
+                
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+                
+                window.scrollTo({
+                  top: targetPosition,
+                  behavior: 'smooth'
+                });
+              });
+            });
+          
+            // Hamburger Menu Toggle
+            const hamburgerButton = document.getElementById('hamburger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            hamburgerButton.addEventListener('click', () => {
+              mobileMenu.classList.toggle('hidden'); // Toggles visibility of mobile menu
+            });
+          </script>
+
+<!-- footer start  -->
+
+  <section>
+    <footer class="footer footer-center bg-gray-950 text-base-content rounded p-10 mt-32">
+        <nav class="grid grid-flow-col gap-4 text-white">
+            <a href="about.html" class="link link-hover">About us</a>
+            <a href="contact.html" class="link link-hover">Contact</a>
+            <a href="advise.html" class="link link-hover">Advises</a>
+            <a href="gallery.html" class="link link-hover">Gallery</a>
+        </nav>
+        <nav>
+            <div class="grid grid-flow-col gap-4">
+                <!-- Twitter -->
+                <a href="https://x.com/DasFisheries" target="_blank" class="hover-effect">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                    </svg>
+                </a>
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/DASFisheries" target="_blank" class="hover-effect">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                    </svg>
+                </a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/dasfisheries/" target="_blank" class="hover-effect">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.338 3.608 1.314.975.975 1.252 2.241 1.314 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.338 2.633-1.314 3.608-.975.975-2.241 1.252-3.608 1.314-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.338-3.608-1.314-.975-.975-1.252-2.241-1.314-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.338-2.633 1.314-3.608.975-.975 2.241-1.252 3.608-1.314 1.265-.058 1.645-.07 4.849-.07m0-2.163c-3.257 0-3.667.014-4.947.072-1.516.066-2.955.35-4.056 1.452-1.101 1.101-1.386 2.541-1.452 4.056-.058 1.28-.072 1.69-.072 4.947s.014 3.667.072 4.947c.066 1.516.35 2.955 1.452 4.056 1.101 1.101 2.541 1.386 4.056 1.452 1.28.058 1.69.072 4.947.072s3.667-.014 4.947-.072c1.516-.066 2.955-.35 4.056-1.452 1.101-1.101 1.386-2.541 1.452-4.056.058-1.28.072-1.69.072-4.947s-.014-3.667-.072-4.947c-.066-1.516-.35-2.955-1.452-4.056-1.101-1.101-2.541-1.386-4.056-1.452-1.28-.058-1.69-.072-4.947-.072zm0 5.838a6.165 6.165 0 1 0 0 12.33 6.165 6.165 0 0 0 0-12.33zm0 10.165a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 1 0-2.881 1.44 1.44 0 0 1 0 2.881z"></path>
+                    </svg>
+                </a>
+                <!-- Threads -->
+                <a href="https://www.threads.net/@dasfisheries" target="_blank" class="hover-effect">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                        <path d="M12.08 24C5.41 24 .18 18.65.18 12S5.42 0 12.08 0c6.63 0 11.87 5.35 11.87 12s-5.24 12-11.87 12zM12.08 1.77C6.32 1.77 1.95 6.31 1.95 12c0 5.67 4.38 10.2 10.13 10.2 5.71 0 10.12-4.51 10.12-10.2 0-5.68-4.41-10.2-10.12-10.2zm4.15 13.94c-.72-.09-.85-.37-.85-.37-.04-.03-2.44-1.43-2.96-1.88-.34.26-.73.41-1.14.42-1.29 0-2.34-1.21-2.34-2.71 0-1.57 1.16-2.77 2.68-2.77 1.55 0 2.67 1.3 2.67 2.84 0 .83-.3 1.58-.85 2.13.07.06 1.56.96 2.23 1.28.12-.25.18-.53.18-.82 0-.43-.16-.79-.44-1.01-.44-.33-1.12-.45-1.77-.42-.63.02-1.42.08-2.15.24-.54.12-.94-.35-1-.89s.32-1.05.86-1.13c.69-.12 1.51-.19 2.14-.24 1.05-.06 1.86-.18 2.48-.52.59-.33.88-.9.88-1.7-.01-1.2-.78-2.16-1.85-2.29-1.62-.21-2.81 1.19-3.04 1.56-.4.6-1.06.78-1.6.43-.52-.33-.66-1.06-.31-1.61.08-.12.8-1.18 1.86-1.76 1.18-.66 2.6-.79 3.88-.37 1.89.62 3.18 2.35 3.18 4.41 0 2.59-2.09 4.71-4.74 4.71-.23 0-.46-.01-.68-.03z"></path>
+                    </svg>
+                </a>
+                <!-- YouTube -->
+                <a href="https://www.youtube.com/@dasfisheries" target="_blank" class="hover-effect">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+                        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+        <p class="text-white">Copyright © 2024 - All right reserved by Das Fisheries Ltd</p>
+    </footer>
+</section>
+
+<style>
+    .hover-effect {
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .hover-effect:hover {
+        transform: scale(1.2);
+        color: #1DA1F2; /* Or change to the color you prefer */
+    }
+</style>
+
+
+<!-- footer end -->
+
+
+</body>
+</html>
